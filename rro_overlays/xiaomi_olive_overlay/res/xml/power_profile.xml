@@ -5,8 +5,8 @@
     <item name="bluetooth.on">1.89</item>
     <item name="wifi.on">0.41</item>
     <item name="wifi.active">159.98</item>
-    <item name="dsp.audio">41.5</item>
-    <item name="dsp.video">69.37</item>
+    <item name="audio">41.5</item>
+    <item name="video">69.37</item>
     <item name="camera.flashlight">211.21</item>
     <item name="camera.avg">322.56</item>
     <item name="gps.on">34.87</item>
