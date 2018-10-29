@@ -2,7 +2,6 @@
 OLD_LOCAL_PATH := $(LOCAL_PATH)
 MM_LIB2D_TEST_PATH := $(call my-dir)
 
-include $(LOCAL_PATH)/../../common.mk
 include $(CLEAR_VARS)
 LOCAL_PATH := $(MM_LIB2D_TEST_PATH)
 LOCAL_MODULE_TAGS := optional
@@ -32,8 +31,7 @@ LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/../../common \
     $(LOCAL_PATH)/../inc
 
-LOCAL_C_INCLUDES+= $(kernel_includes)
-LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 
 LOCAL_SRC_FILES := mm_lib2d_test.c
 
