@@ -23,6 +23,8 @@ PRODUCT_PACKAGES += \
     xiaomi_olive_overlay_Snap \
     xiaomi_olive_overlay_SystemUI
 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1440
 TARGET_SCREEN_WIDTH := 720
