@@ -24,6 +24,8 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_mi439
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi439
 
 # Kernel
+BOARD_BOOTIMG_HEADER_VERSION := 1
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0x78B0000 loop.max_part=7
 TARGET_KERNEL_CONFIG := mi439-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm439
