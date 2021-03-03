@@ -3,3 +3,7 @@ persist.vendor.camera.stats.test=5
 
 # Xiaomi Mi439 - Sensors
 ro.vendor.sensors.pseudo_gyro=true
+
+# Xiaomi Mi439 - SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SDM439
