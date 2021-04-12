@@ -9,6 +9,11 @@ vendor.audio.feature.fluence.enable=true
 # Xiaomi Mi439 - Camera
 persist.vendor.camera.stats.test=5
 
+# Xiaomi Mi439 - Encryption
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 # Xiaomi Mi439 - FM Radio
 ro.vendor.builtin_fm_antenna_support=1
 
