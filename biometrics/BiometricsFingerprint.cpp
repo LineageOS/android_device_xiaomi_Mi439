@@ -22,6 +22,9 @@
 #include <hardware/fingerprint.h>
 #include "BiometricsFingerprint.h"
 
+#include <android-base/file.h>
+#include <android-base/properties.h>
+
 #include <inttypes.h>
 #include <unistd.h>
 
@@ -211,11 +214,15 @@ IBiometricsFingerprint* BiometricsFingerprint::getInstance() {
     return sInstance;
 }
 
-fingerprint_device_t* BiometricsFingerprint::openHal() {
+fingerprint_device_t* BiometricsFingerprint::openTheHal(const char *hwmdl_name) {
     int err;
     const hw_module_t *hw_mdl = nullptr;
+
+    if (std::string(hwmdl_name).empty())
+        return nullptr;
+
     ALOGD("Opening fingerprint hal library...");
-    if (0 != (err = hw_get_module(FINGERPRINT_HARDWARE_MODULE_ID, &hw_mdl))) {
+    if (0 != (err = hw_get_module(hwmdl_name, &hw_mdl))) {
         ALOGE("Can't open fingerprint HW Module, error: %d", err);
         return nullptr;
     }
@@ -255,6 +262,53 @@ fingerprint_device_t* BiometricsFingerprint::openHal() {
     }
 
     return fp_device;
+}
+
+void BiometricsFingerprint::setFpSensorProp(std::string hwmdl_name) {
+    android::base::SetProperty("persist.vendor.fingerprint.hwmdl", hwmdl_name);
+}
+
+fingerprint_device_t* BiometricsFingerprint::openHal() {
+    fingerprint_device_t *fp_device;
+    std::string last_hwmdl_name = android::base::GetProperty("persist.vendor.fingerprint.hwmdl", "");
+
+    if (!last_hwmdl_name.empty() && last_hwmdl_name != "failed") {
+        ALOGI("Directly loading fingerprint HAL with hardware module id: %s.", last_hwmdl_name.c_str());
+        fp_device = BiometricsFingerprint::openTheHal(last_hwmdl_name.c_str());
+        if (fp_device == nullptr) {
+            ALOGE("Failed to load fingerprint HAL with hardware module id: %s.", last_hwmdl_name.c_str());
+        } else {
+            BiometricsFingerprint::setFpSensorProp(last_hwmdl_name);
+            return fp_device;
+        }
+    } else {
+        // FPC
+        ALOGI("Trying to load FPC Fingerprint HAL (using default hardware module id).");
+        fp_device = BiometricsFingerprint::openTheHal(FINGERPRINT_HARDWARE_MODULE_ID);
+        if (fp_device == nullptr) {
+            ALOGE("Failed to load fingerprint HAL with default hardware module id");
+        } else {
+            BiometricsFingerprint::setFpSensorProp(FINGERPRINT_HARDWARE_MODULE_ID);
+            return fp_device;
+        }
+        // Cleanup FPC
+        ALOGI("Clean up FPC.");
+        if (!android::base::WriteStringToFile("disable", "/sys/devices/soc/soc:fpc1020/compatible_all", true)) {
+            ALOGE("Failed to cleanup FPC.");
+        }
+        // Goodix
+        ALOGI("Trying to load Goodix Fingerprint HAL (using gf_fingerprint hardware module id).");
+        fp_device = BiometricsFingerprint::openTheHal("gf_fingerprint");
+        if (fp_device == nullptr) {
+            ALOGE("Failed to load fingerprint HAL with gf_fingerprint hardware module id");
+        } else {
+            BiometricsFingerprint::setFpSensorProp("gf_fingerprint");
+            return fp_device;
+        }
+    }
+
+    BiometricsFingerprint::setFpSensorProp("failed");
+    return nullptr;
 }
 
 void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
