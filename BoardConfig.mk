@@ -12,6 +12,9 @@ DEVICE_PATH := device/xiaomi/olives
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := olive,olivelite,olivewood,olives
 
+# HIDL
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := olive-perf_defconfig
 
