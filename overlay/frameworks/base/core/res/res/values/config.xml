@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2017 The LineageOS Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display. Optionally, you can append either `@left` or `@right` to the
+         end of the path string, in order to change the path origin to either the top left,
+         or top right of the display.
+
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+
+         Example for a 10px x 10px square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
+         Example for a 10dp x 10dp square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
+
+         @see https://www.w3.org/TR/SVG/paths.html#PathData
+         -->
+    <string name="config_mainBuiltInDisplayCutout">M-59,13.521603 C-51.3411734,20.2116468 -45.8262261,25.5003131 -42.4551581,29.3876018 C-37.4060696,35.2110207 -32.5523328,41.2298059 -26.3762157,45.6443331 C-22.5105074,48.4020038 -18.1301226,50.536005 -13.5506295,51.9524108 C-9.15897443,53.3087038 -4.57948127,55 1.18885336e-05,55 C4.57574829,55 9.14772792,53.3087038 13.539383,51.9524108 C18.1263897,50.536005 22.5067744,48.4020038 26.3649692,45.6443331 C32.5523566,41.2298059 37.4060934,35.2110207 42.4551819,29.3876018 C45.8237453,25.5003131 51.3386847,20.2116468 59,13.521603 L59,0 L-59,0 L-59,13.521603 Z</string>
+</resources>
