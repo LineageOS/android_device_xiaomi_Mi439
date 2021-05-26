@@ -12,6 +12,9 @@ DEVICE_PATH := device/xiaomi/olives
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := olive,olivelite,olivewood,olives
 
+# Kernel
+TARGET_KERNEL_CONFIG := olive-perf_defconfig
+
 # Partitions
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296
