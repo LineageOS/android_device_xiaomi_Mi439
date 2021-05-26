@@ -28,3 +28,7 @@ on post-fs-data
 #add fingerprint for C3I-224 by gaoge start
     mkdir /data/vendor/goodix 0770 system system
 #add fingerprint for C3I-224 by gaoge end
+
+on property:vendor.fingerprint.hwmdl=failed
+    stop vendor.fps_hal
+    mount none /vendor/etc/permissions/blank.xml /vendor/etc/permissions/android.hardware.fingerprint.xml bind
