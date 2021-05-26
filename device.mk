@@ -33,6 +33,10 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_olives \
     android.hardware.biometrics.fingerprint@2.2
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.xiaomi.device.rc
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf

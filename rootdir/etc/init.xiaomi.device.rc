@@ -1,0 +1,82 @@
+# Camera - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
+on boot
+    #add by yufei for dual calibration SR-QL2115-01000000567
+    chmod 0775 /data/vendor/camera
+
+on fs
+    mkdir /persist/camera/
+    chmod 0777 /persist/camera/
+    chown cameraserver audio  /persist/camera/rear_dc_cal_wt.bin
+    chmod 0777 /persist/camera/rear_dc_cal_wt.bin
+
+on post-fs-data
+    mkdir /persist/camera  0777 system system
+#Create camera director for dualcam_calibration
+    mkdir /mnt/vendor/persist/camera
+    chown system cameraserver /mnt/vendor/persist/camera
+    chmod 0755 /mnt/vendor/persist/camera
+
+#####copy megvii files#####
+on property:sys.boot_completed=1
+    mkdir /data/vendor/camera/westalgo 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/dof_model 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/rt_model 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/rt_model/mask 0777 cameraserver audio
+    mkdir /data/vendor/camera/westalgo/rt_model/score 0777 cameraserver audio
+    copy /vendor/etc/westalgo/dof_model/cache_data /data/vendor/camera/westalgo/dof_model/cache_data
+    chown cameraserver audio  /data/vendor/camera/westalgo/dof_model/cache_data
+    chmod 0777 /data/vendor/camera/westalgo/dof_model/cache_data
+    copy /vendor/etc/westalgo/dof_model/megviisegment_model /data/vendor/camera/westalgo/dof_model/megviisegment_model
+    chown cameraserver audio  /data/vendor/camera/westalgo/dof_model/megviisegment_model
+    chmod 0777 /data/vendor/camera/westalgo/dof_model/megviisegment_model
+    copy /vendor/etc/westalgo/dof_model/model_mdl_cache /data/vendor/camera/westalgo/dof_model/model_mdl_cache
+    chown cameraserver audio  /data/vendor/camera/westalgo/dof_model/model_mdl_cache
+    chmod 0777 /data/vendor/camera/westalgo/dof_model/model_mdl_cache
+    copy /vendor/etc/westalgo/rt_model/mask/cache_data /data/vendor/camera/westalgo/rt_model/mask/cache_data
+    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/mask/cache_data
+    chmod 0777 /data/vendor/camera/westalgo/rt_model/mask/cache_data
+    copy /vendor/etc/westalgo/rt_model/mask/megviisegment_model /data/vendor/camera/westalgo/rt_model/mask/megviisegment_model
+    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/mask/megviisegment_model
+    chmod 0777 /data/vendor/camera/westalgo/rt_model/mask/megviisegment_model
+    copy /vendor/etc/westalgo/rt_model/mask/model_mdl_cache /data/vendor/camera/westalgo/rt_model/mask/model_mdl_cache
+    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/mask/model_mdl_cache
+    chmod 0777 /data/vendor/camera/westalgo/rt_model/mask/model_mdl_cache
+    copy /vendor/etc/westalgo/rt_model/score/cache_data /data/vendor/camera/westalgo/rt_model/score/cache_data
+    chown cameraserver audio  data/vendor/camera/westalgo/rt_model/score/cache_data
+    chmod 0777 data/vendor/camera/westalgo/rt_model/score/cache_data
+    copy /vendor/etc/westalgo/rt_model/score/megviisegment_model /data/vendor/camera/westalgo/rt_model/score/megviisegment_model
+    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/score/megviisegment_model
+    chmod 0777 /data/vendor/camera/westalgo/rt_model/score/megviisegment_model
+    copy /vendor/etc/westalgo/rt_model/score/model_mdl_cache /data/vendor/camera/westalgo/rt_model/score/model_mdl_cache
+    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/score/model_mdl_cache
+    chmod 0777 /data/vendor/camera/westalgo/rt_model/score/model_mdl_cache
+    chown cameraserver audio  /persist/camera/dualcam_cali_megvii.bin
+    chmod 0777 /persist/camera/dualcam_cali_megvii.bin
+#add golden bin
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_imx486_gc2375hw.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin /data/vendor/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_imx486_ov02a10.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_s5k2l7_gc2375hw.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_ov02a10.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc2375hw.bin
+
+    copy /vendor/etc/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
+    chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
+    chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_ov13b10_gc02m1hw.bin
