@@ -1,4 +1,5 @@
 # Not appended blobs from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
+# olivewood Package version: Redmi/olivewood/olivewood:10/QKQ1.191014.001/V12.0.4.0.QCQIDXM:user/release-keys
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -4459,7 +4460,7 @@ vendor/lib/libwa_rtdof.so
 vendor/lib/libXMFD_AgeGender.so
 
 # Camera configs
-vendor/etc/camera/camera_config.xml
+vendor/etc/camera/camera_config.xml|002a0e7e1f9c4ed832553b40f63c253d80d01af8
 vendor/etc/camera/csidtg_camera.xml
 vendor/etc/camera/csidtg_chromatix.xml
 vendor/etc/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
@@ -4672,6 +4673,11 @@ vendor/etc/camera/s5k3m3sm_chromatix.xml
 vendor/etc/camera/s5k3p3sm_chromatix.xml
 vendor/etc/camera/s5k3p8sp_chromatix.xml
 vendor/etc/camera/s5k5e9yu05_mono_chromatix.xml
+
+# Camera configs - from olivewood
+vendor/etc/camera/new_vdclear_hht_params_omnivision_8856_i_cn..xml
+vendor/etc/camera/olivelite_arc_hdr_params_i.xml
+vendor/etc/camera/olivewood_arc_hdr_params_i.xml
 
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8937.so
