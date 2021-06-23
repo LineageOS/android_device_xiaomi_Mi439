@@ -1,0 +1,13 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "init_xiaomi_mi439",
+    srcs: ["init_xiaomi_mi439.cpp"],
+    whole_static_libs: ["//device/xiaomi/sdm439-common:libinit_xiaomi_sdm439"],
+    include_dirs: ["system/core/init"],
+    recovery_available: true,
+}
