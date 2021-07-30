@@ -1,2 +1,5 @@
 # FDT
 type fdt_model, fs_type, sysfs_type;
+
+# FM
+type sysfs_fm_lan, fs_type, sysfs_type;
