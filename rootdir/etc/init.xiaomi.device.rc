@@ -16,43 +16,14 @@ on post-fs-data
     chown system cameraserver /mnt/vendor/persist/camera
     chmod 0755 /mnt/vendor/persist/camera
 
-#####copy megvii files#####
+#add golden bin
 on property:sys.boot_completed=1
     mkdir /data/vendor/camera/westalgo 0777 cameraserver audio
     mkdir /data/vendor/camera/westalgo/dof_model 0777 cameraserver audio
     mkdir /data/vendor/camera/westalgo/rt_model 0777 cameraserver audio
     mkdir /data/vendor/camera/westalgo/rt_model/mask 0777 cameraserver audio
     mkdir /data/vendor/camera/westalgo/rt_model/score 0777 cameraserver audio
-    copy /vendor/etc/westalgo/dof_model/cache_data /data/vendor/camera/westalgo/dof_model/cache_data
-    chown cameraserver audio  /data/vendor/camera/westalgo/dof_model/cache_data
-    chmod 0777 /data/vendor/camera/westalgo/dof_model/cache_data
-    copy /vendor/etc/westalgo/dof_model/megviisegment_model /data/vendor/camera/westalgo/dof_model/megviisegment_model
-    chown cameraserver audio  /data/vendor/camera/westalgo/dof_model/megviisegment_model
-    chmod 0777 /data/vendor/camera/westalgo/dof_model/megviisegment_model
-    copy /vendor/etc/westalgo/dof_model/model_mdl_cache /data/vendor/camera/westalgo/dof_model/model_mdl_cache
-    chown cameraserver audio  /data/vendor/camera/westalgo/dof_model/model_mdl_cache
-    chmod 0777 /data/vendor/camera/westalgo/dof_model/model_mdl_cache
-    copy /vendor/etc/westalgo/rt_model/mask/cache_data /data/vendor/camera/westalgo/rt_model/mask/cache_data
-    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/mask/cache_data
-    chmod 0777 /data/vendor/camera/westalgo/rt_model/mask/cache_data
-    copy /vendor/etc/westalgo/rt_model/mask/megviisegment_model /data/vendor/camera/westalgo/rt_model/mask/megviisegment_model
-    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/mask/megviisegment_model
-    chmod 0777 /data/vendor/camera/westalgo/rt_model/mask/megviisegment_model
-    copy /vendor/etc/westalgo/rt_model/mask/model_mdl_cache /data/vendor/camera/westalgo/rt_model/mask/model_mdl_cache
-    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/mask/model_mdl_cache
-    chmod 0777 /data/vendor/camera/westalgo/rt_model/mask/model_mdl_cache
-    copy /vendor/etc/westalgo/rt_model/score/cache_data /data/vendor/camera/westalgo/rt_model/score/cache_data
-    chown cameraserver audio  data/vendor/camera/westalgo/rt_model/score/cache_data
-    chmod 0777 data/vendor/camera/westalgo/rt_model/score/cache_data
-    copy /vendor/etc/westalgo/rt_model/score/megviisegment_model /data/vendor/camera/westalgo/rt_model/score/megviisegment_model
-    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/score/megviisegment_model
-    chmod 0777 /data/vendor/camera/westalgo/rt_model/score/megviisegment_model
-    copy /vendor/etc/westalgo/rt_model/score/model_mdl_cache /data/vendor/camera/westalgo/rt_model/score/model_mdl_cache
-    chown cameraserver audio  /data/vendor/camera/westalgo/rt_model/score/model_mdl_cache
-    chmod 0777 /data/vendor/camera/westalgo/rt_model/score/model_mdl_cache
-    chown cameraserver audio  /persist/camera/dualcam_cali_megvii.bin
-    chmod 0777 /persist/camera/dualcam_cali_megvii.bin
-#add golden bin
+
     copy /vendor/etc/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
     chown cameraserver audio  /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
     chmod 0777 /data/vendor/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
