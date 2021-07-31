@@ -1,0 +1,2 @@
+allow hal_camera_default huaqin_sysfs:dir r_dir_perms;
+allow hal_camera_default huaqin_sysfs:file r_file_perms;
