@@ -1,4 +1,4 @@
-# Not appended blobs from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
+# Not appended blobs from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNCNXM:user/release-keys
 # olivewood Package version: Redmi/olivewood/olivewood:10/QKQ1.191014.001/V12.0.4.0.QCQIDXM:user/release-keys
 
 # ACDB
