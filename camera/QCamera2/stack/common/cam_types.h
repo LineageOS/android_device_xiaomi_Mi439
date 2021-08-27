@@ -59,7 +59,7 @@
 #define MAX_ZOOMS_CNT 91
 #define ZOOM_MIN 4096        // min zoom value: 1x
 #define ZOOM_MAX 4096 * 8 // max zoom value: 8x
-#define MAX_SIZES_CNT 40
+#define MAX_SIZES_CNT 200
 #define MAX_EXP_BRACKETING_LENGTH 32
 #define MAX_ROI 10
 #define MAX_STREAM_NUM_IN_BUNDLE 8
@@ -834,7 +834,8 @@ typedef enum {
     CAM_SCENE_MODE_BARCODE,
     CAM_SCENE_MODE_HDR,
     CAM_SCENE_MODE_AQUA,
-    CAM_SCENE_MODE_MAX
+
+    CAM_SCENE_MODE_MAX = 32
 } cam_scene_mode_type;
 
 typedef enum {
@@ -1018,6 +1019,8 @@ typedef struct {
     uint32_t blur_level;
     uint32_t blur_min_value;
     uint32_t blur_max_value;
+
+    uint32_t xiaomi_reserved[2];
 } cam_rtb_blur_info_t;
 
 typedef struct  {
@@ -1389,7 +1392,8 @@ typedef struct {
 typedef struct {
     uint32_t frame_id;                         /* frame index of which faces are detected */
     uint8_t num_faces_detected;                /* number of faces detected */
-    cam_face_detection_info_t faces[MAX_ROI];  /* detailed information of faces detected */
+    cam_face_detection_info_t faces[MAX_ROI + 5];  /* detailed information of faces detected */
+                                                   /* + 5 is reserved by xiaomi */
     qcamera_face_detect_type_t fd_type;        /* face detect for preview or snapshot frame*/
     cam_dimension_t fd_frame_dim;              /* frame dims on which fd is applied */
     uint8_t update_flag;                       /* flag to inform whether HAL needs to send cb
@@ -2117,6 +2121,9 @@ typedef enum {
     CAM_INTF_PARM_EFFECT,
     CAM_INTF_PARM_RAW_DIMENSION,
     CAM_INTF_PARM_DIS_ENABLE,
+
+    XIAOMI_01,
+
     CAM_INTF_PARM_LED_MODE,
     CAM_INTF_META_HISTOGRAM,
     CAM_INTF_META_FACE_DETECTION,
