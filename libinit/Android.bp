@@ -6,6 +6,7 @@
 
 cc_library_static {
     name: "init_xiaomi_mi439",
+    cppflags: ["-fexceptions"],
     srcs: ["init_xiaomi_mi439.cpp"],
     whole_static_libs: ["//device/xiaomi/sdm439-common:libinit_xiaomi_sdm439"],
     include_dirs: ["system/core/init"],
