@@ -1,0 +1,2 @@
+allow init fdt_model:dir r_dir_perms;
+allow init fdt_model:file r_file_perms;

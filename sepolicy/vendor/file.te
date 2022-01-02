@@ -1,0 +1,2 @@
+# FDT
+type fdt_model, fs_type, sysfs_type;
