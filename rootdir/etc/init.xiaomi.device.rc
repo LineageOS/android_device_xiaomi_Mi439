@@ -1,3 +1,7 @@
+# Audio
+on property:ro.product.vendor.device=*
+    setprop vendor.audio.mixer_xml.path /vendor/etc/${ro.product.vendor.device}_mixer_paths_sdm439_pm8953.xml
+
 # Camera - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
 on boot
     #add by yufei for dual calibration SR-QL2115-01000000567
