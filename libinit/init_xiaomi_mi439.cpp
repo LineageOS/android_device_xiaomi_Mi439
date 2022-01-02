@@ -43,6 +43,17 @@ static void set_acdb_path_props(std::string device)
     }
 }
 
+static void set_props_olive()
+{
+    /* Camera */
+    property_override("persist.vendor.camera.aec.sync", "1");
+    property_override("persist.vendor.camera.awb.sync", "2");
+    property_override("persist.vendor.camera.expose.aux", "1");
+
+    /* Charger */
+    property_override("persist.vendor.ctm.disallowed", "true");
+}
+
 static void determine_device()
 {
     std::string fdt_model;
@@ -53,6 +64,7 @@ static void determine_device()
     } else if (fdt_model.find("Olive QRD") != fdt_model.npos) {
         set_variant_props(olive_info);
         set_acdb_path_props("olive");
+        set_props_olive();
     }
 }
 

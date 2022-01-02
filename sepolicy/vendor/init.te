@@ -1,2 +1,5 @@
 allow init fdt_model:dir r_dir_perms;
 allow init fdt_model:file r_file_perms;
+
+set_prop(init, camera_prop);
+set_prop(init, vendor_hvdcp_opti_prop);
