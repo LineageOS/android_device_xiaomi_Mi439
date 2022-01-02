@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="android.overlay.xiaomi.olive.systemui"
+        android:versionCode="1"
+        android:versionName="1.0">
+        <overlay android:targetPackage="com.android.systemui"
+                android:requiredSystemPropertyName="ro.product.vendor.device"
+		android:requiredSystemPropertyValue="olive"
+		android:priority="800"
+		android:isStatic="true" />
+</manifest>
