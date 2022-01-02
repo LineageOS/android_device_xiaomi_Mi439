@@ -9,6 +9,7 @@ $(call inherit-product, device/xiaomi/sdm439-common/sdm439.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
+    xiaomi_pine_overlay \
     xiaomi_olive_overlay \
     xiaomi_olive_overlay_Snap \
     xiaomi_olive_overlay_SystemUI
