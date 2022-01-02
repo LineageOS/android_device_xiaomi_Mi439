@@ -1,2 +1,5 @@
 # Ir
 /dev/lirc0	u:object_r:ir_device:s0
+
+# Sensors
+/(vendor|system/vendor)/bin/sensors.qti.[0-9a-z]+	u:object_r:sensors_exec:s0

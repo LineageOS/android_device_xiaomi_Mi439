@@ -55,3 +55,32 @@ on property:sys.boot_completed=1
 # IR
 on boot
     chown system system /dev/lirc0
+
+# Sensors
+service vendor.sensors.qti /vendor/bin/true
+    override
+    class core
+    user system
+    group system
+    writepid /dev/cpuset/system-background/tasks
+    disabled
+
+service vendor.sensors.qti.pine /vendor/bin/sensors.qti.pine
+    class core
+    user system
+    group system
+    writepid /dev/cpuset/system-background/tasks
+    disabled
+
+service vendor.sensors.qti.olive /vendor/bin/sensors.qti.olive
+    class core
+    user system
+    group system
+    writepid /dev/cpuset/system-background/tasks
+    disabled
+
+on property:ro.product.vendor.device=pine
+    enable vendor.sensors.qti.pine
+
+on property:ro.product.vendor.device=olive
+    enable vendor.sensors.qti.olive

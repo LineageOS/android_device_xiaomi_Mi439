@@ -2713,3 +2713,7 @@ vendor/firmware/aw87519_spk.bin
 vendor/firmware/focaltech_ts_fw.bin
 vendor/firmware/novatek_ts_fw.bin
 vendor/firmware/novatek_ts_mp.bin
+
+# Sensors
+vendor/bin/sensors.qti:vendor/bin/sensors.qti.pine
+vendor/bin/sensors.qti:vendor/bin/sensors.qti.olive
