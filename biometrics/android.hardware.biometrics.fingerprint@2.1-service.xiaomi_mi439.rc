@@ -5,6 +5,7 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     class late_start
     user system
     group system input uhid
+    disabled
 
 on boot
     # add for goodix 
@@ -31,3 +32,10 @@ on post-fs-data
 on property:vendor.fingerprint.hwmdl=failed
     stop vendor.fps_hal
     mount none /vendor/etc/permissions/blank.xml /vendor/etc/permissions/android.hardware.fingerprint.xml bind
+
+on property:ro.product.vendor.device=pine
+    stop vendor.fps_hal
+    mount none /vendor/etc/permissions/blank.xml /vendor/etc/permissions/android.hardware.fingerprint.xml bind
+
+on property:ro.product.vendor.device=olive
+    enable vendor.fps_hal
