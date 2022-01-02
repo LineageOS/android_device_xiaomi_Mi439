@@ -13,7 +13,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1572
+TARGET_SCREEN_HEIGHT := 1440
 TARGET_SCREEN_WIDTH := 720
 
 # Permissions
@@ -36,7 +36,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_olives \
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mi439 \
     android.hardware.biometrics.fingerprint@2.2
 
 # Rootdir
@@ -52,4 +52,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/olives/olives-vendor.mk)
+$(call inherit-product, vendor/xiaomi/mi439/mi439-vendor.mk)

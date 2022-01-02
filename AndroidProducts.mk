@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_olives.mk
+    $(LOCAL_DIR)/lineage_mi439.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_olives-user \
-    lineage_olives-userdebug \
-    lineage_olives-eng
+    lineage_mi439-user \
+    lineage_mi439-userdebug \
+    lineage_mi439-eng

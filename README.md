@@ -1,1 +1,1 @@
-# Device Tree for Xiaomi Redmi 8 / 8A / 8A Dual (olives)
+# Device Tree for Xiaomi SDM439 Devices (mi439)
