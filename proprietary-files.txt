@@ -3,22 +3,24 @@
 # olivewood Package version: Redmi/olivewood/olivewood:10/QKQ1.191014.001/V12.0.4.0.QCQIDXM:user/release-keys
 
 # ACDB
-vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Global_cal.acdb
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_General_cal.acdb
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_workspaceFile.qwsp
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm439-sku1-snd-card/SDM439_SKU1_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/olive/SDM439_SKU1_Global_cal.acdb
+vendor/etc/acdbdata/olive/SDM439_SKU1_General_cal.acdb
+vendor/etc/acdbdata/olive/SDM439_SKU1_workspaceFile.qwsp
+vendor/etc/acdbdata/olive/SDM439_SKU1_Bluetooth_cal.acdb
+vendor/etc/acdbdata/olive/SDM439_SKU1_Speaker_cal.acdb
+vendor/etc/acdbdata/olive/SDM439_SKU1_Handset_cal.acdb
+vendor/etc/acdbdata/olive/SDM439_SKU1_Headset_cal.acdb
+vendor/etc/acdbdata/olive/SDM439_SKU1_Hdmi_cal.acdb
+
+# ACDB - from pine
+vendor/etc/acdbdata/pine/SDM439_SKU1_Bluetooth_cal.acdb
+vendor/etc/acdbdata/pine/SDM439_SKU1_General_cal.acdb
+vendor/etc/acdbdata/pine/SDM439_SKU1_Global_cal.acdb
+vendor/etc/acdbdata/pine/SDM439_SKU1_Handset_cal.acdb
+vendor/etc/acdbdata/pine/SDM439_SKU1_Hdmi_cal.acdb
+vendor/etc/acdbdata/pine/SDM439_SKU1_Headset_cal.acdb
+vendor/etc/acdbdata/pine/SDM439_SKU1_Speaker_cal.acdb
+vendor/etc/acdbdata/pine/SDM439_SKU1_workspaceFile.qwsp
 
 # Camera
 vendor/lib/libactuator_olive_dw9714_imx363_qtech.so
