@@ -3,6 +3,7 @@
 # olivewood Package version: Redmi/olivewood/olivewood:10/QKQ1.191014.001/V12.0.4.0.QCQIDXM:user/release-keys
 
 # ACDB
+vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/olive/SDM439_SKU1_Global_cal.acdb
 vendor/etc/acdbdata/olive/SDM439_SKU1_General_cal.acdb
 vendor/etc/acdbdata/olive/SDM439_SKU1_workspaceFile.qwsp
