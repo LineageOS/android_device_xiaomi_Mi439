@@ -1,0 +1,1 @@
+require board=pine|olive|olivelite|olivewood
