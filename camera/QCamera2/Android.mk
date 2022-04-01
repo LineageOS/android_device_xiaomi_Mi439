@@ -54,6 +54,16 @@ endif
 
 ifeq ($(TARGET_SUPPORT_HAL1),false)
 LOCAL_CFLAGS += -DQCAMERA_HAL3_SUPPORT
+LOCAL_SRC_FILES += \
+	HAL/QCameraMem.cpp \
+	HAL/QCameraThermalAdapter.cpp \
+        util/QCameraFOVControl.cpp \
+        util/QCameraHALPP.cpp \
+        util/QCameraDualFOVPP.cpp \
+        util/QCameraExtZoomTranslator.cpp \
+        util/QCameraPprocManager.cpp \
+        util/QCameraBokeh.cpp \
+        util/QCameraClearSight.cpp
 else
 LOCAL_CFLAGS += -DQCAMERA_HAL1_SUPPORT
 LOCAL_SRC_FILES += \

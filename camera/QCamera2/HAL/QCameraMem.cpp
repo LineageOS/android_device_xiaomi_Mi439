@@ -38,7 +38,11 @@
 #include "gralloc_priv.h"
 
 // Camera dependencies
+#ifdef QCAMERA_HAL3_SUPPORT
+#include "QCamera3HWI.h"
+#else
 #include "QCamera2HWI.h"
+#endif
 #include "QCameraMem.h"
 #include "QCameraParameters.h"
 #include "QCameraTrace.h"

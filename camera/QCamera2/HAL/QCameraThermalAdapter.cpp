@@ -34,7 +34,11 @@
 #include <utils/Errors.h>
 
 // Camera dependencies
+#ifdef QCAMERA_HAL3_SUPPORT
+#include "QCamera3HWI.h"
+#else
 #include "QCamera2HWI.h"
+#endif
 #include "QCameraThermalAdapter.h"
 
 extern "C" {

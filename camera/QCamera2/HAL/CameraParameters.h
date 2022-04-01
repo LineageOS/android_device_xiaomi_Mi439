@@ -540,8 +540,10 @@ public:
     static const char KEY_LIGHTFX[];
 
     // Value for KEY_ZOOM_SUPPORTED or KEY_SMOOTH_ZOOM_SUPPORTED.
+#ifdef QCAMERA_HAL1_SUPPORT
     static const char TRUE[];
     static const char FALSE[];
+#endif
 
     // Value for KEY_FOCUS_DISTANCES.
     static const char FOCUS_DISTANCE_INFINITY[];
