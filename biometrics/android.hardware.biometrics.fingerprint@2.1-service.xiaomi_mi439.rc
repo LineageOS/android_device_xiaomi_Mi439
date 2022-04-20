@@ -31,11 +31,12 @@ on post-fs-data
 
 on property:vendor.fingerprint.hwmdl=failed
     stop vendor.fps_hal
-    mount none /vendor/etc/permissions/blank.xml /vendor/etc/permissions/android.hardware.fingerprint.xml bind
-
-on property:ro.product.vendor.device=pine
-    stop vendor.fps_hal
-    mount none /vendor/etc/permissions/blank.xml /vendor/etc/permissions/android.hardware.fingerprint.xml bind
 
 on property:ro.product.vendor.device=olive
     enable vendor.fps_hal
+
+on property:vendor.fingerprint.hwmdl=fingerprint
+    setprop ro.boot.product.hardware.sku olive
+
+on property:vendor.fingerprint.hwmdl=gf_fingerprint
+    setprop ro.boot.product.hardware.sku olive
