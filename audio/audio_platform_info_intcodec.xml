@@ -48,7 +48,7 @@
         <usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="35"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="35"/>
         <usecase name="USECASE_INCALL_MUSIC_UPLINK" type="out" id="1" />
-        <usecase name="USECASE_INCALL_MUSIC_UPLINK2" type="out" id="35" />
+        <usecase name="USECASE_INCALL_MUSIC_UPLINK2" type="out" id="16" />
         <usecase name="USECASE_AUDIO_SPKR_CALIB_TX" type="in" id="26"/>
         <usecase name="USECASE_AUDIO_PLAYBACK_VOIP" type="out" id="27" />
         <usecase name="USECASE_AUDIO_RECORD_VOIP" type="in" id="27" />
