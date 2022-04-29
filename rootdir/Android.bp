@@ -1,0 +1,22 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// fstab
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "etc/fstab.qcom",
+    vendor: true,
+}
+
+// Init scripts
+
+prebuilt_etc {
+    name: "init.xiaomi.device.rc",
+    src: "etc/init.xiaomi.device.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
