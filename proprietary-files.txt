@@ -24,7 +24,131 @@ vendor/etc/acdbdata/pine/SDM439_SKU1_Headset_cal.acdb
 vendor/etc/acdbdata/pine/SDM439_SKU1_Speaker_cal.acdb
 vendor/etc/acdbdata/pine/SDM439_SKU1_workspaceFile.qwsp
 
-# Camera
+# Camera stack
+vendor/bin/mm-qjpeg-dec-test
+vendor/bin/mm-qjpeg-enc-test
+vendor/bin/mm-qomx-idec-test
+vendor/bin/mm-qomx-ienc-test
+vendor/lib/libSNPE.so
+vendor/lib/libVDClearShot.so
+vendor/lib/libXMFD_AgeGender.so
+vendor/lib/lib_lowlight.so
+vendor/lib/libarcsoft_beautyshot.so
+vendor/lib/libarcsoft_high_dynamic_range.so
+vendor/lib/libc++_shared.so
+vendor/lib/libcamera_scene.so
+vendor/lib/libcert_parse.wpa_s.so
+vendor/lib/libdepthmapwrapper.so
+vendor/lib/libflash_gpio.so
+vendor/lib/libflash_pmic.so
+vendor/lib/libjpegdhw.so
+vendor/lib/libjpegdmahw.so
+vendor/lib/libjpegehw.so
+vendor/lib/libmibokeh_439.so
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_is.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_mct.so
+vendor/lib/libmmcamera2_mct_shimlayer.so
+vendor/lib/libmmcamera2_pp_buf_mgr.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_lib.so
+vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera_bokeh.so
+vendor/lib/libmmcamera_csidtg.so
+vendor/lib/libmmcamera_dbg.so
+vendor/lib/libmmcamera_depth_map.so
+vendor/lib/libmmcamera_dummyalgo.so
+vendor/lib/libmmcamera_eebinparse.so
+vendor/lib/libmmcamera_eeprom_util.so
+vendor/lib/libmmcamera_eztune_module.so
+vendor/lib/libmmcamera_facedetection_lib.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc2.so
+vendor/lib/libmmcamera_hdr_gb_lib.so
+vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_irs1645.so
+vendor/lib/libmmcamera_isp_abf40.so
+vendor/lib/libmmcamera_isp_bcc40.so
+vendor/lib/libmmcamera_isp_be_stats44.so
+vendor/lib/libmmcamera_isp_bf_stats47.so
+vendor/lib/libmmcamera_isp_bg_stats44.so
+vendor/lib/libmmcamera_isp_bhist_stats44.so
+vendor/lib/libmmcamera_isp_bpc40.so
+vendor/lib/libmmcamera_isp_chroma_enhan40.so
+vendor/lib/libmmcamera_isp_chroma_suppress40.so
+vendor/lib/libmmcamera_isp_clamp_encoder40.so
+vendor/lib/libmmcamera_isp_clamp_video40.so
+vendor/lib/libmmcamera_isp_clamp_viewfinder40.so
+vendor/lib/libmmcamera_isp_color_correct40.so
+vendor/lib/libmmcamera_isp_color_xform_encoder40.so
+vendor/lib/libmmcamera_isp_color_xform_viewfinder40.so
+vendor/lib/libmmcamera_isp_cs_stats44.so
+vendor/lib/libmmcamera_isp_demosaic40.so
+vendor/lib/libmmcamera_isp_demux40.so
+vendor/lib/libmmcamera_isp_fovcrop_encoder40.so
+vendor/lib/libmmcamera_isp_fovcrop_viewfinder40.so
+vendor/lib/libmmcamera_isp_gamma40.so
+vendor/lib/libmmcamera_isp_ihist_stats44.so
+vendor/lib/libmmcamera_isp_linearization40.so
+vendor/lib/libmmcamera_isp_ltm44.so
+vendor/lib/libmmcamera_isp_luma_adaptation40.so
+vendor/lib/libmmcamera_isp_mce40.so
+vendor/lib/libmmcamera_isp_mesh_rolloff40.so
+vendor/lib/libmmcamera_isp_rs_stats44.so
+vendor/lib/libmmcamera_isp_scaler_encoder44.so
+vendor/lib/libmmcamera_isp_scaler_viewfinder44.so
+vendor/lib/libmmcamera_isp_sce40.so
+vendor/lib/libmmcamera_isp_sub_module.so
+vendor/lib/libmmcamera_isp_template.so
+vendor/lib/libmmcamera_isp_wb40.so
+vendor/lib/libmmcamera_paaf_lib.so
+vendor/lib/libmmcamera_pdaf.so
+vendor/lib/libmmcamera_pdafcamif.so
+vendor/lib/libmmcamera_ppbase_module.so
+vendor/lib/libmmcamera_ppeiscore.so
+vendor/lib/libmmcamera_quadracfa.so
+vendor/lib/libmmcamera_sat_test_lib.so
+vendor/lib/libmmcamera_stillmore_lib.so
+vendor/lib/libmmcamera_sw2d_lib.so
+vendor/lib/libmmcamera_thread_services.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib/libmmcamera_tuning.so
+vendor/lib/libmmcamera_tuning_lookup.so
+vendor/lib/libmmcamera_westalgo_rtbokeh.so
+vendor/lib/libmmjpeg.so
+vendor/lib/libmmqjpeg_codec.so
+vendor/lib/libmmqjpegdma.so
+vendor/lib/libmpbase.so
+vendor/lib/libois_bu63165.so
+vendor/lib/libois_lc898122.so
+vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc.so
+vendor/lib/libqomx_jpegenc_pipe.so
+vendor/lib/libremosaic_daemon.so
+vendor/lib/libseemore.so
+vendor/lib/libsymphony-cpu.so
+vendor/lib/libsymphonypower.so
+vendor/lib64/libmmcamera2_frame_algorithm.so
+vendor/lib64/libmmcamera2_is.so
+vendor/lib64/libmmcamera2_q3a_core.so
+vendor/lib64/libmmcamera2_stats_algorithm.so
+vendor/lib64/libmmcamera2_stats_lib.so
+vendor/lib64/libmmcamera_dbg.so
+vendor/lib64/libmmcamera_faceproc.so
+vendor/lib64/libmmcamera_faceproc2.so
+vendor/lib64/libmmcamera_tintless_algo.so
+vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
+
+# Camera modules
 vendor/lib/libactuator_olive_dw9714_imx363_qtech.so
 vendor/lib/libactuator_olive_dw9714_ov13b10_ofilm.so
 vendor/lib/libactuator_olive_dw9714_s5k2l7_sunny.so
@@ -3306,6 +3430,9 @@ vendor/etc/camera/vdclear_hht_params_i.xml
 vendor/etc/camera/vdclear_hht_params_ii.xml
 vendor/etc/camera/vdclear_hht_params_iii.xml
 
+# Charger
+vendor/bin/hvdcp_opti
+
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8937.so
 
@@ -3340,6 +3467,14 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
+# Graphics firmware
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+
 # Keymaster (QTI) - from PAN
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
@@ -3351,3 +3486,16 @@ vendor/lib64/libqtikeymaster4.so
 # Sensors - from PAN
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.pine
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.olive
+
+# Sensors (SSC)
+vendor/lib64/libsensor_reg.so
+vendor/lib64/sensors.ssc.so
+
+# Thermal configs
+vendor/etc/thermal-engine-camera.conf
+vendor/etc/thermal-engine-high.conf
+vendor/etc/thermal-engine-map.conf
+vendor/etc/thermal-engine-nolimits.conf
+vendor/etc/thermal-engine-normal.conf
+vendor/etc/thermal-engine-sgame.conf
+vendor/etc/thermal-engine.conf
