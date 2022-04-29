@@ -8,7 +8,7 @@ cc_library_static {
     name: "init_xiaomi_mi439",
     cppflags: ["-fexceptions"],
     srcs: ["init_xiaomi_mi439.cpp"],
-    whole_static_libs: ["//device/xiaomi/sdm439-common:libinit_xiaomi_sdm439"],
+    whole_static_libs: ["//device/xiaomi/mithorium-common:libinit_xiaomi_mithorium"],
     include_dirs: ["system/core/init"],
     recovery_available: true,
 }

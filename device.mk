@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from sdm439-common
-$(call inherit-product, device/xiaomi/sdm439-common/sdm439.mk)
+# Inherit from mithorium-common
+$(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -53,4 +53,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/mi439/mi439-vendor.mk)
+$(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)

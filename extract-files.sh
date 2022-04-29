@@ -25,8 +25,8 @@ fi
 
 set -e
 
-export DEVICE=mi439
-export DEVICE_COMMON=sdm439-common
+export DEVICE=Mi439
+export DEVICE_COMMON=mithorium-common
 export VENDOR=xiaomi
 
 "./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
