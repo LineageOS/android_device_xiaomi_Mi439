@@ -4,4 +4,9 @@
         <transport>hwbinder</transport>
         <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.radio.config</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IRadioConfig/default</fqname>
+    </hal>
 </manifest>
