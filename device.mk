@@ -4,6 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Gatekeeper
+TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER := true
+
+# Keymaster
+TARGET_USES_DEVICE_SPECIFIC_KEYMASTER := true
+
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 
