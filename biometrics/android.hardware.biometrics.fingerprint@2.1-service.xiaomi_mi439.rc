@@ -32,7 +32,7 @@ on post-fs-data
 on property:vendor.fingerprint.hwmdl=failed
     stop vendor.fps_hal
 
-on property:ro.product.vendor.device=olive
+on property:ro.vendor.xiaomi.device=olive
     enable vendor.fps_hal
 
 on property:vendor.fingerprint.hwmdl=fingerprint

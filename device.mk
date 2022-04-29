@@ -52,7 +52,8 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.xiaomi.device.rc
+    init.xiaomi.device.rc \
+    init.xiaomi.device.sh
 
 # Sensors
 PRODUCT_COPY_FILES += \

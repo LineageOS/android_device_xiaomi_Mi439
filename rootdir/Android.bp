@@ -20,3 +20,11 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
+
+// Configuration scripts
+
+sh_binary {
+    name: "init.xiaomi.device.sh",
+    src: "bin/init.xiaomi.device.sh",
+    vendor: true,
+}
