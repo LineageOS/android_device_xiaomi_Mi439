@@ -5,8 +5,11 @@ service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
     oneshot
 
 # Audio
-on property:ro.vendor.xiaomi.device=*
-    setprop vendor.audio.mixer_xml.path /vendor/etc/${ro.vendor.xiaomi.device}_mixer_paths_sdm439_pm8953.xml
+on property:ro.vendor.xiaomi.device=pine
+    setprop vendor.audio.mixer_xml.path /vendor/etc/pine_mixer_paths_sdm439_pm8953.xml
+
+on property:ro.vendor.xiaomi.device=olive
+    setprop vendor.audio.mixer_xml.path /vendor/etc/olive_mixer_paths_sdm439_pm8953.xml
 
 # Camera - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
 on boot
