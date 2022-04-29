@@ -1,6 +1,3 @@
-# FDT
-genfscon sysfs /firmware/devicetree/base/model	u:object_r:fdt_model:s0
-
 # FM
 genfscon sysfs /class/fm/fm_lan_enable/lan_enable u:object_r:sysfs_fm_lan:s0
 
