@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Cryptfshw
+TARGET_EXCLUDE_CRYPTFSHW := true
+
 # Gatekeeper
 TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER := true
 
