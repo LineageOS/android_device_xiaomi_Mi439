@@ -3348,12 +3348,6 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 
-# QTEE - from PAN
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
-
 # Sensors - from PAN
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.pine
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.olive
