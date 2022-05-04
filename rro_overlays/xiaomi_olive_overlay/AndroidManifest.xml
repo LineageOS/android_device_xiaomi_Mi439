@@ -3,7 +3,7 @@
         android:versionCode="1"
         android:versionName="1.0">
         <overlay android:targetPackage="android"
-                android:requiredSystemPropertyName="ro.product.vendor.device"
+                android:requiredSystemPropertyName="ro.vendor.xiaomi.device"
 		android:requiredSystemPropertyValue="olive"
 		android:priority="800"
 		android:isStatic="true" />
