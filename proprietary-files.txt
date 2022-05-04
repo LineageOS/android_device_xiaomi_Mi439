@@ -27,6 +27,9 @@ vendor/etc/acdbdata/pine/SDM439_SKU1_workspaceFile.qwsp
 # ADSP Modules
 vendor/lib/rfsa/adsp/dirac_resource.dar
 vendor/lib/rfsa/adsp/libdirac-capiv2.so
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
+vendor/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_res.bin
 
 # Audio dirac - from mido
 vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
