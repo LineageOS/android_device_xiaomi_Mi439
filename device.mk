@@ -15,6 +15,7 @@ TARGET_USES_DEVICE_SPECIFIC_KEYMASTER := true
 
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
