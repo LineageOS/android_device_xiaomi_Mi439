@@ -3505,6 +3505,15 @@ vendor/bin/sensors.qti:vendor/bin/sensors.qti.olive
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
 
+# IMS (uceService) - from PAN
+-system_ext/app/uceShimService/uceShimService.apk
+system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
+system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar
+system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar
+system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
+system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
+system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so
+
 # Thermal configs
 vendor/etc/thermal-engine-camera.conf
 vendor/etc/thermal-engine-high.conf
