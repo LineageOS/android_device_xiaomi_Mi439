@@ -3497,9 +3497,11 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 
-# Sensors - from PAN
+# Sensors
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.pine
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.olive
+vendor/lib/libsensor1.so
+vendor/lib64/libsensor1.so
 
 # Sensors (SSC)
 vendor/lib64/libsensor_reg.so
