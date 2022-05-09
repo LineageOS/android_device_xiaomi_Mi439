@@ -3497,6 +3497,15 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 
+# Perf configs - from PAN
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/perf-profile0.conf
+vendor/etc/perf/perf-profile1.conf
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+
 # Sensors
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.pine
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.olive
