@@ -38,7 +38,6 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi439
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0x78B0000 loop.max_part=7
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := mi439-perf_defconfig
