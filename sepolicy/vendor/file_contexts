@@ -1,5 +1,9 @@
 # Ir
 /dev/lirc0	u:object_r:ir_device:s0
 
+# Partitions
+/dev/block/platform/soc/7824900\.sdhci/by-name/system   u:object_r:system_block_device:s0
+/dev/block/platform/soc/7824900\.sdhci/by-name/vendor   u:object_r:system_block_device:s0
+
 # Sensors
 /(vendor|system/vendor)/bin/sensors.qti.[0-9a-z]+	u:object_r:sensors_exec:s0
