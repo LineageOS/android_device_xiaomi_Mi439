@@ -101,3 +101,14 @@ on property:ro.vendor.xiaomi.device=pine
 
 on property:ro.vendor.xiaomi.device=olive
     enable vendor.sensors.qti.olive
+
+# Thermal
+service thermal-engine /vendor/bin/thermal-engine-olive
+    override
+    class main
+    user root
+    group root
+    socket thermal-send-client stream 0660 system oem_2907
+    socket thermal-recv-client stream 0660 system oem_2907
+    socket thermal-recv-passive-client stream 0660 system oem_2907
+    socket thermal-send-rule stream 0660 system oem_2907

@@ -8,3 +8,6 @@
 
 # Sensors
 /(vendor|system/vendor)/bin/sensors.qti.[0-9a-z]+	u:object_r:sensors_exec:s0
+
+# Thermal
+/(vendor|system/vendor)/bin/thermal-engine-olive	u:object_r:thermal-engine_exec:s0

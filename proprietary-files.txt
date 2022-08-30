@@ -3525,6 +3525,10 @@ system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
 system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
 system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so
 
+# Thermal
+vendor/bin/thermal-engine:vendor/bin/thermal-engine-olive
+vendor/lib64/libthermalfeature.so
+
 # Thermal configs
 vendor/etc/thermal-engine-camera.conf
 vendor/etc/thermal-engine-high.conf
