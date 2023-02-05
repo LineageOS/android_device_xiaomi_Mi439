@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="android.overlay.xiaomi.olive.snap"
+        package="android.overlay.xiaomi.olive.aperture"
         android:versionCode="1"
         android:versionName="1.0">
-        <overlay android:targetPackage="org.lineageos.snap"
+        <overlay android:targetPackage="org.lineageos.aperture"
                 android:requiredSystemPropertyName="ro.vendor.xiaomi.device"
 		android:requiredSystemPropertyValue="olive"
 		android:priority="800"

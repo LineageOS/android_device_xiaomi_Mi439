@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_olive_overlay_Snap",
+    name: "xiaomi_olive_overlay_Aperture",
     sdk_version: "current",
     vendor: true,
 }
