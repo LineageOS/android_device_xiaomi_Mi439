@@ -58,7 +58,6 @@ class Vibrator : public IVibrator {
     template <typename T>
     Return<void> perform(T effect, EffectStrength strength, perform_cb _hidl_cb);
     Status enable(bool enabled, uint32_t ms);
-    Status activate(uint32_t ms);
     void timeout();
 
     static void timerCallback(union sigval sigval);
@@ -67,11 +66,10 @@ class Vibrator : public IVibrator {
     static uint8_t strengthToAmplitude(EffectStrength strength, Status* status);
 
   private:
-    bool mEnabled{false};
     uint8_t mAmplitude{UINT8_MAX};
+    bool mHasEffect{false};
     bool mExternalControl{false};
     std::mutex mMutex;
-    timer_t mTimer{nullptr};
 };
 }  // namespace implementation
 }  // namespace V1_3
