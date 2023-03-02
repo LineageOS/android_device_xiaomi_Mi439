@@ -37,19 +37,12 @@ static constexpr uint32_t QPNP_VIB_LDO_VMIN_MV = 1504;
 static constexpr uint32_t QPNP_VIB_LDO_VMAX_MV = 3544;
 static constexpr uint32_t MV_ADDITION_MAX = QPNP_VIB_LDO_VMAX_MV - QPNP_VIB_LDO_VMIN_MV;
 
-static constexpr uint32_t MS_PER_S = 1000;
-static constexpr uint32_t NS_PER_MS = 1000000;
-
 Vibrator::Vibrator() {
     sigevent se{};
     se.sigev_notify = SIGEV_THREAD;
     se.sigev_value.sival_ptr = this;
     se.sigev_notify_function = timerCallback;
     se.sigev_notify_attributes = nullptr;
-
-    if (timer_create(CLOCK_REALTIME, &se, &mTimer) < 0) {
-        ALOGE("Can not create timer!%s", strerror(errno));
-    }
 }
 
 // Methods from ::android::hardware::vibrator::V1_0::IVibrator follow.
@@ -109,15 +102,10 @@ Return<bool> Vibrator::supportsExternalControl() {
 }
 
 Return<Status> Vibrator::setExternalControl(bool enabled) {
-    if (mEnabled) {
-        ALOGW("Setting external control while the vibrator is enabled is unsupported!");
-        return Status::UNSUPPORTED_OPERATION;
-    } else {
-        ALOGI("ExternalControl: %s -> %s\n", mExternalControl ? "true" : "false",
-              enabled ? "true" : "false");
-        mExternalControl = enabled;
-        return Status::OK;
-    }
+    ALOGI("ExternalControl: %s -> %s\n", mExternalControl ? "true" : "false",
+            enabled ? "true" : "false");
+    mExternalControl = enabled;
+    return Status::OK;
 }
 
 Return<void> Vibrator::perform_1_3(Effect effect, EffectStrength strength, perform_cb _hidl_cb) {
@@ -174,8 +162,6 @@ Status Vibrator::enable(bool enabled, uint32_t ms) {
             ALOGE("Failed to enable vibration!");
             return Status::UNKNOWN_ERROR;
         }
-        ALOGI("Enabled: %s -> %s\n", mEnabled ? "true" : "false", enabled ? "true" : "false");
-        mEnabled = enabled;
         return Status::OK;
     }
 }
@@ -191,39 +177,11 @@ Status Vibrator::activate(uint32_t ms) {
         }
     }
 
-    itimerspec ts{};
-    ts.it_value.tv_sec = ms / MS_PER_S;
-    ts.it_value.tv_nsec = ms % MS_PER_S * NS_PER_MS;
-
-    if (timer_settime(mTimer, 0, &ts, nullptr) < 0) {
-        ALOGE("Can not set timer!");
-        status = Status::UNKNOWN_ERROR;
-    }
-
-    if ((status != Status::OK) || !ms) {
-        Status _status;
-
-        _status = enable(false, 0);
-
-        if (status == Status::OK) {
-            status = _status;
-        }
-    }
-
     return status;
 }
 
 void Vibrator::timeout() {
-    std::lock_guard<std::mutex> lock{mMutex};
-    itimerspec ts{};
-
-    if (timer_gettime(mTimer, &ts) < 0) {
-        ALOGE("Can not read timer!");
-    }
-
-    if (ts.it_value.tv_sec == 0 && ts.it_value.tv_nsec == 0) {
-        enable(false, 0);
-    }
+    return;
 }
 
 void Vibrator::timerCallback(union sigval sigval) {
