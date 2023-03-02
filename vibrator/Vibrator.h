@@ -71,7 +71,6 @@ class Vibrator : public IVibrator {
     uint8_t mAmplitude{UINT8_MAX};
     bool mExternalControl{false};
     std::mutex mMutex;
-    timer_t mTimer{nullptr};
 };
 }  // namespace implementation
 }  // namespace V1_3
