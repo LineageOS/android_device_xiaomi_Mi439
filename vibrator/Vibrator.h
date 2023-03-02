@@ -67,11 +67,9 @@ class Vibrator : public IVibrator {
     static uint8_t strengthToAmplitude(EffectStrength strength, Status* status);
 
   private:
-    bool mEnabled{false};
     uint8_t mAmplitude{UINT8_MAX};
     bool mExternalControl{false};
     std::mutex mMutex;
-    timer_t mTimer{nullptr};
 };
 }  // namespace implementation
 }  // namespace V1_3
