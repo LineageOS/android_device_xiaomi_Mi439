@@ -13,6 +13,9 @@ TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER := true
 # Keymaster
 TARGET_USES_DEVICE_SPECIFIC_KEYMASTER := true
 
+# Vibrator
+TARGET_USES_DEVICE_SPECIFIC_VIBRATOR := true
+
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -82,6 +85,10 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.3-service.xiaomi_mi439
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)
