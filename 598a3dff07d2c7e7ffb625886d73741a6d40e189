@@ -16,6 +16,24 @@
       "message": "line length",
       "revId": "598a3dff07d2c7e7ffb625886d73741a6d40e189",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73c5a339_46c98ba0",
+        "filename": "vibrator/Vibrator.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-03-03T07:33:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97977c01_a55d6470",
+      "revId": "598a3dff07d2c7e7ffb625886d73741a6d40e189",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
