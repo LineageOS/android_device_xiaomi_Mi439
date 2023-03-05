@@ -71,6 +71,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/Mi439/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom_ramdisk \
