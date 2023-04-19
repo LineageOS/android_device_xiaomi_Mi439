@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b1e8765_a03ad750",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 26349
+      },
+      "writtenOn": "2023-04-19T18:41:33Z",
+      "side": 1,
+      "message": "I think it\u0027s better to make this prop NOT mediatek only instead.",
+      "revId": "05c06284f106b64175d23679a4b67e6ffe374957",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
