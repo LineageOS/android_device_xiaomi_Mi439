@@ -1,6 +1,9 @@
 # Xiaomi Mi439 - Camera
 persist.vendor.camera.stats.test=5
 
+# Xiaomi Mi439 - FM Radio
+ro.vendor.builtin_fm_antenna_support=1
+
 # Xiaomi Mi439 - Sensors
 ro.vendor.sensors.pseudo_gyro=true
 
