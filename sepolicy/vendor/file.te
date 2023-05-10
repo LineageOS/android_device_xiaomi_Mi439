@@ -6,3 +6,6 @@ type sysfs_fm_lan, fs_type, sysfs_type;
 
 # Huaqin
 type huaqin_sysfs, fs_type, sysfs_type;
+
+# Mach
+type sysfs_mi439_mach, fs_type, sysfs_type;
