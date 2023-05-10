@@ -7,3 +7,6 @@ genfscon sysfs /class/fm/fm_lan_enable/lan_enable u:object_r:sysfs_fm_lan:s0
 # Huaqin
 genfscon sysfs /class/huaqin/		u:object_r:huaqin_sysfs:s0
 genfscon sysfs /devices/virtual/huaqin/	u:object_r:huaqin_sysfs:s0
+
+# Mach
+genfscon sysfs /xiaomi-sdm439-mach	u:object_r:sysfs_mi439_mach:s0
