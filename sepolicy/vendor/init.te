@@ -1,2 +1,4 @@
 allow init fdt_model:file r_file_perms;
 allow init sysfs_fm_lan:file rw_file_perms;
+allow init sysfs_mi439_mach:dir r_dir_perms;
+allow init sysfs_mi439_mach:file r_file_perms;
