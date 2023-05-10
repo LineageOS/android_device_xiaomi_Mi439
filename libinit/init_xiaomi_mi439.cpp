@@ -29,12 +29,18 @@ static const variant_info_t olive_info = {
 
 static void determine_device()
 {
-    std::string fdt_model;
+    std::string fdt_model, mach_codename;
     android::base::ReadFileToString("/sys/firmware/devicetree/base/model", &fdt_model, true);
     if (fdt_model.find("PINE QRD") != fdt_model.npos) {
         set_variant_props(pine_info);
     } else if (fdt_model.find("Olive QRD") != fdt_model.npos) {
         set_variant_props(olive_info);
+        android::base::ReadFileToString("/sys/xiaomi-sdm439-mach/codename", &mach_codename, true);
+        mach_codename.pop_back();
+        if (mach_codename == "olivelite")
+            set_ro_build_prop("model", "Redmi 8A", true);
+        else if (mach_codename == "olivewood")
+            set_ro_build_prop("model", "Redmi 8A Dual", true);
     }
 }
 
