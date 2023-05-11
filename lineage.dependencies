@@ -4,7 +4,7 @@
     "target_path": "device/xiaomi/mithorium-common"
   },
   {
-    "repository": "android_kernel_xiaomi_sdm439",
-    "target_path": "kernel/xiaomi/sdm439"
+    "repository": "android_kernel_xiaomi_msm8937",
+    "target_path": "kernel/xiaomi/msm8937"
   }
 ]
