@@ -46,8 +46,14 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/7824900.sdhci
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := lineageos_mi439_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm439
+TARGET_KERNEL_CONFIG := \
+    vendor/msm8937-perf_defconfig \
+    vendor/xiaomi/common.config \
+    vendor/xiaomi/sdm439/mi439.config \
+    vendor/xiaomi/feature/android-12.config \
+    vendor/xiaomi/feature/lineageos.config \
+    vendor/xiaomi/feature/lmkd.config
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
