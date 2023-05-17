@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fca9258a_f99a498f",
+        "filename": "sepolicy/vendor/property_contexts",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-05-17T17:03:03Z",
+      "side": 1,
+      "message": "This should go to a common repository if it\u0027s used in common apps like FM",
+      "revId": "811d76f766c2f7e60482bf2f1e2f8dbbbb0ef9a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
