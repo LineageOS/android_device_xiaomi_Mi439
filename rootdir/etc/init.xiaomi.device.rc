@@ -74,12 +74,11 @@ on boot
     chown system system /dev/lirc0
 
 # Sensors
-service vendor.sensors.qti /vendor/bin/true
+service vendor.sensors.qti /non-existent
     override
     class core
     user system
     group system
-    writepid /dev/cpuset/system-background/tasks
     disabled
 
 service vendor.sensors.qti.pine /vendor/bin/sensors.qti.pine
