@@ -1,4 +1,5 @@
 # Ir
+/dev/ir_spi	u:object_r:ir_device:s0
 /dev/lirc0	u:object_r:ir_device:s0
 
 # HALs
