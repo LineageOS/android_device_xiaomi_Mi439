@@ -71,6 +71,7 @@ on property:hw.fm.init=*
 
 # IR
 on boot
+    chown system system /dev/ir_spi
     chown system system /dev/lirc0
 
 # LiveDisplay
