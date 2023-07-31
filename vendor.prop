@@ -3,8 +3,8 @@ persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=false
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
-ro.vendor.audio.sdk.fluencetype=none
-vendor.audio.feature.fluence.enable=false
+ro.vendor.audio.sdk.fluencetype=fluence
+vendor.audio.feature.fluence.enable=true
 
 # Xiaomi Mi439 - Camera
 persist.vendor.camera.stats.test=5
