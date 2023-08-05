@@ -2,9 +2,5 @@
   {
     "repository": "android_device_xiaomi_mithorium-common",
     "target_path": "device/xiaomi/mithorium-common"
-  },
-  {
-    "repository": "android_kernel_xiaomi_sdm439",
-    "target_path": "kernel/xiaomi/sdm439"
   }
 ]
