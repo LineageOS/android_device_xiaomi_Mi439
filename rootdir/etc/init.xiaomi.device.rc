@@ -73,6 +73,11 @@ on property:hw.fm.init=*
 on boot
     chown system system /dev/lirc0
 
+# LiveDisplay
+on boot
+    chown root root /sys/devices/virtual/graphics/fb0/reading_mode
+    chmod 0000 /sys/devices/virtual/graphics/fb0/reading_mode
+
 # Sensors
 service vendor.sensors.qti /non-existent
     override
