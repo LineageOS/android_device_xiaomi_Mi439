@@ -1,5 +1,5 @@
 service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
-    class core
+    class hal
     user root
     group root
     oneshot
@@ -78,34 +78,6 @@ on boot
     chown root root /sys/devices/virtual/graphics/fb0/reading_mode
     chmod 0000 /sys/devices/virtual/graphics/fb0/reading_mode
 
-# Sensors
-service vendor.sensors.qti /non-existent
-    override
-    class core
-    user system
-    group system
-    disabled
-
-service vendor.sensors.qti.pine /vendor/bin/sensors.qti.pine
-    class core
-    user system
-    group system
-    writepid /dev/cpuset/system-background/tasks
-    disabled
-
-service vendor.sensors.qti.olive /vendor/bin/sensors.qti.olive
-    class core
-    user system
-    group system
-    writepid /dev/cpuset/system-background/tasks
-    disabled
-
-on property:ro.vendor.xiaomi.device=pine
-    enable vendor.sensors.qti.pine
-
-on property:ro.vendor.xiaomi.device=olive
-    enable vendor.sensors.qti.olive
-
 # Thermal
 service thermal-engine /vendor/bin/thermal-engine-olive
     override
@@ -116,3 +88,7 @@ service thermal-engine /vendor/bin/thermal-engine-olive
     socket thermal-recv-client stream 0660 system oem_2907
     socket thermal-recv-passive-client stream 0660 system oem_2907
     socket thermal-send-rule stream 0660 system oem_2907
+
+# OverlayFS
+on property:ro.vendor.xiaomi.device=*
+    mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/sensors/:/vendor/etc/sensors
