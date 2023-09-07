@@ -3130,7 +3130,7 @@ vendor/lib/libmmcamera_pine_ov13855_qtech_eeprom.so
 vendor/lib/libmmcamera_pine_ov13855_qtech.so
 
 # Camera configs
-vendor/etc/camera/camera_config.xml|7ea2f6235aace923ae548882e3c64da13fd85757
+vendor/etc/camera/camera_config.xml|002a0e7e1f9c4ed832553b40f63c253d80d01af8
 vendor/etc/camera/csidtg_camera.xml
 vendor/etc/camera/csidtg_chromatix.xml
 vendor/etc/camera/golden_rear_dc_cal_wt_imx363_ov02a10.bin
@@ -3350,6 +3350,7 @@ vendor/etc/camera/olivelite_arc_hdr_params_i.xml
 vendor/etc/camera/olivewood_arc_hdr_params_i.xml
 
 # Camera configs - from pine
+vendor/etc/camera/camera_config.xml:vendor/overlayfs/pine/etc/camera/camera_config.xml
 vendor/etc/camera/arc_hdr_params_i.xml
 vendor/etc/camera/arc_hdr_params_ii.xml
 vendor/etc/camera/arc_hdr_params_iii.xml

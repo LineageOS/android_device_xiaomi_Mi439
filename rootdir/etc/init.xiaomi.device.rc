@@ -92,3 +92,6 @@ service thermal-engine /vendor/bin/thermal-engine-olive
 # OverlayFS
 on property:ro.vendor.xiaomi.device=*
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/sensors/:/vendor/etc/sensors
+
+on property:ro.vendor.xiaomi.device=pine
+    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/pine/etc/camera/:/vendor/etc/camera
