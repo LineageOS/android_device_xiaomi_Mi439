@@ -81,6 +81,8 @@ on boot
 # OverlayFS
 on property:ro.vendor.xiaomi.device=*
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/sensors/:/vendor/etc/sensors
+    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/camera/:/vendor/etc/camera
+    restart vendor.camera-provider-2-4
 
 # Thermal
 service thermal-engine /vendor/bin/thermal-engine-olive
