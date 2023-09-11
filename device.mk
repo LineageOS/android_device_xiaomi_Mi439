@@ -78,6 +78,7 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom_ramdisk \
+    init.recovery.xiaomi.device.rc \
     init.xiaomi.device.rc \
     init.xiaomi.device.sh
 
