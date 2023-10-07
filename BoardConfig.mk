@@ -51,7 +51,6 @@ TARGET_KERNEL_CONFIG += \
     vendor/xiaomi/feature/lineageos.config
 
 # Partitions
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_USES_METADATA_PARTITION := true
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
