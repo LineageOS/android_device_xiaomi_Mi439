@@ -2,7 +2,7 @@
 genfscon proc /sys/dev/dt2w u:object_r:dt2w_ctrl:s0
 
 # FM
-genfscon sysfs /class/fm/fm_lan_enable/lan_enable u:object_r:sysfs_fm_lan:s0
+genfscon sysfs /devices/virtual/fm/fm_lan_enable/lan_enable u:object_r:sysfs_fm_lan:s0
 
 # Huaqin
 genfscon sysfs /class/huaqin/		u:object_r:huaqin_sysfs:s0
