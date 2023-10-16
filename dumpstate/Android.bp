@@ -1,0 +1,11 @@
+cc_library_shared {
+    name: "libdumpstate_device",
+    vendor: true,
+    shared_libs: [
+        "libbase",
+        "libdumpstateutil",
+    ],
+    srcs: [
+        "dumpstate_device.cpp",
+    ],
+}

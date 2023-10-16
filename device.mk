@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8937
 
+# Dumpstate
+PRODUCT_PACKAGES += \
+    libdumpstate_device
+
 # Filesystem
 PRODUCT_PACKAGES += \
     e2fsck_ramdisk \
