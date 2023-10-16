@@ -1,0 +1,5 @@
+get_prop(hal_dumpstate_default, vendor_fingerprint_prop)
+r_dir_file(hal_dumpstate_default, dt2w_ctrl)
+r_dir_file(hal_dumpstate_default, huaqin_sysfs)
+r_dir_file(hal_dumpstate_default, proc_cmdline)
+r_dir_file(hal_dumpstate_default, sysfs_fm_lan)
