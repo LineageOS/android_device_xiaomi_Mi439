@@ -48,6 +48,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG += \
     vendor/xiaomi/sdm439/mi439.config \
+    vendor/msm-clk.config \
     vendor/feature/lineageos.config
 
 # Partitions
