@@ -98,6 +98,10 @@ PRODUCT_PACKAGES += \
     init.xiaomi.device.rc \
     init.xiaomi.device.sh
 
+# Shims
+PRODUCT_PACKAGES += \
+    libhidlbase_shim
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
