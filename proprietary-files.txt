@@ -114,15 +114,6 @@ vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
 
-# IMS (uceService) - from PAN
--system_ext/app/uceShimService/uceShimService.apk
-system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
-system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar
-system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar
-system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so
-
 # Thermal
 vendor/bin/thermal-engine:vendor/bin/thermal-engine-olive
 vendor/lib64/libthermalfeature.so
