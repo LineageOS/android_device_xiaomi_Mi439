@@ -47,10 +47,15 @@ static void determine_device()
 {
     std::string fdt_model, mach_codename;
     android::base::ReadFileToString("/sys/firmware/devicetree/base/model", &fdt_model, true);
-    if (fdt_model.find("PINE QRD") != fdt_model.npos) {
+    if (fdt_model.empty())
+        return;
+    fdt_model.pop_back();
+    if (fdt_model == "PINE QRD") {
         set_variant_props(pine_info);
-    } else if (fdt_model.find("Olive QRD") != fdt_model.npos) {
+    } else if (fdt_model == "Olive QRD") {
         android::base::ReadFileToString("/sys/xiaomi-sdm439-mach/codename", &mach_codename, true);
+        if (mach_codename.empty())
+            return;
         mach_codename.pop_back();
         if (mach_codename == "olivelite")
             set_variant_props(olivelite_info);
