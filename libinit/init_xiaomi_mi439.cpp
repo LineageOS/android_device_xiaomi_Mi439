@@ -5,6 +5,7 @@
  */
 
 #include <libinit_dalvik_heap.h>
+#include <libinit_utils.h>
 #include <libinit_variant.h>
 
 #include "vendor_init.h"
@@ -63,5 +64,6 @@ static void determine_device()
 
 void vendor_load_properties() {
     determine_device();
+    set_bootloader_prop();
     set_dalvik_heap();
 }
