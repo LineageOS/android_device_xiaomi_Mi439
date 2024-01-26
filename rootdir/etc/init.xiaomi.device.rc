@@ -12,22 +12,17 @@ on property:ro.vendor.xiaomi.device=olive
     setprop vendor.audio.mixer_xml.path /vendor/etc/olive_mixer_paths_sdm439_pm8953.xml
 
 # Camera - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
-on boot
-    #add by yufei for dual calibration SR-QL2115-01000000567
-    chmod 0775 /data/vendor/camera
-
-on fs
-    mkdir /persist/camera/
-    chmod 0777 /persist/camera/
-    chown cameraserver audio  /persist/camera/rear_dc_cal_wt.bin
-    chmod 0777 /persist/camera/rear_dc_cal_wt.bin
-
-on post-fs-data
-    mkdir /persist/camera  0777 system system
-#Create camera director for dualcam_calibration
+on post-fs
+    # Create camera director for dualcam_calibration
     mkdir /mnt/vendor/persist/camera
     chown system cameraserver /mnt/vendor/persist/camera
     chmod 0755 /mnt/vendor/persist/camera
+    chown cameraserver audio /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+    chmod 0666 /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+
+on early-boot
+    # add by yufei for dual calibration SR-QL2115-01000000567
+    chmod 0775 /data/vendor/camera
 
 #add golden bin
 on property:sys.boot_completed=1
@@ -80,7 +75,7 @@ on boot
     chmod 0000 /sys/devices/virtual/graphics/fb0/reading_mode
 
 # OverlayFS
-on property:ro.vendor.xiaomi.device=*
+on boot && property:ro.vendor.xiaomi.device=*
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/sensors/:/vendor/etc/sensors
     mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/camera/:/vendor/etc/camera
     restart vendor.camera-provider-2-4
