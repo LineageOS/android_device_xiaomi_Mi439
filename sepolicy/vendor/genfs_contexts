@@ -10,3 +10,12 @@ genfscon sysfs /devices/virtual/huaqin/	u:object_r:huaqin_sysfs:s0
 
 # Mach
 genfscon sysfs /xiaomi-sdm439-mach	u:object_r:sysfs_mi439_mach:s0
+
+# Kernel 4.19 - Wakeup
+genfscon sysfs /devices/platform/soc/1b0c000.qcom,cci/1b0c000.qcom,cci:qcom,camera@2/video4linux/video3/wakeup	u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/78b7000.spi/spi_master/spi3/spi3.0/wakeup/wakeup	u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/78b7000.spi/spi_master/spi3/spi3.0/input/input0/wakeup	u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/78b7000.spi/spi_master/spi3/spi3.0/input/input1/wakeup	u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/78b7000.spi/spi_master/spi3/spi3.0/input/input2/wakeup	u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/78b7000.spi/spi_master/spi3/spi3.0/input/input3/wakeup	u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup/wakeup	u:object_r:sysfs_wakeup:s0
