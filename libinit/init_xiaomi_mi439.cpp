@@ -51,6 +51,7 @@ static void determine_device()
         return;
     fdt_model.pop_back();
     if (fdt_model == "PINE QRD") {
+        return; // TEMP
         set_variant_props(pine_info);
     } else if (fdt_model == "Olive QRD") {
         android::base::ReadFileToString("/sys/xiaomi-sdm439-mach/codename", &mach_codename, true);

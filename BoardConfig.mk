@@ -27,7 +27,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439,Mi439
+TARGET_OTA_ASSERT_DEVICE := olive,olivelite,olivewood,olives,mi439,Mi439
 
 # Display
 TARGET_SCREEN_DENSITY := 320
