@@ -1,5 +1,5 @@
 # DT2W
-type dt2w_ctrl, fs_type, proc_type;
+type sysctl_mi439_ts, fs_type, proc_type;
 
 # FM
 type sysfs_fm_lan, fs_type, sysfs_type;
