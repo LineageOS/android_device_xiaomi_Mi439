@@ -79,7 +79,7 @@ extern "C" void dumpstate_device_handler(const int fd, [[maybe_unused]] const bo
     DumpFileToFd(fd, "Huaqin PCBA_CONFIG", "/sys/devices/virtual/huaqin/interface/hw_info/pcba_config");
 
     // Touchscreen
-    DumpFileToFd(fd, "Touchscreen DT2W", "/proc/sys/dev/dt2w");
+    DumpFileToFd(fd, "Touchscreen DT2W", "/proc/sys/dev/xiaomi_sdm439_touchscreen/enable_dt2w");
 
     return;
 }
