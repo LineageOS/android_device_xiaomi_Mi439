@@ -46,25 +46,19 @@ static const variant_info_t olivewood_info = {
 
 static void determine_device()
 {
-    std::string fdt_model, mach_codename;
-    android::base::ReadFileToString("/sys/firmware/devicetree/base/model", &fdt_model, true);
-    if (fdt_model.empty())
+    std::string mach_codename;
+    android::base::ReadFileToString("/sys/xiaomi-sdm439-mach/codename", &mach_codename, true);
+    if (mach_codename.empty())
         return;
-    fdt_model.pop_back();
-    if (fdt_model == "PINE QRD") {
+    mach_codename.pop_back();
+    if (mach_codename == "pine")
         set_variant_props(pine_info);
-    } else if (fdt_model == "Olive QRD") {
-        android::base::ReadFileToString("/sys/xiaomi-sdm439-mach/codename", &mach_codename, true);
-        if (mach_codename.empty())
-            return;
-        mach_codename.pop_back();
-        if (mach_codename == "olivelite")
-            set_variant_props(olivelite_info);
-        else if (mach_codename == "olivewood")
-            set_variant_props(olivewood_info);
-        else
-            set_variant_props(olive_info);
-    }
+    else if (mach_codename == "olive")
+        set_variant_props(olive_info);
+    else if (mach_codename == "olivelite")
+        set_variant_props(olivelite_info);
+    else if (mach_codename == "olivewood")
+        set_variant_props(olivewood_info);
 }
 
 void vendor_load_properties() {
