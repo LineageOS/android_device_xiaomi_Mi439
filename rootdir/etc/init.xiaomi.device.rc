@@ -8,7 +8,7 @@ service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
 on property:ro.vendor.xiaomi.device=pine
     setprop vendor.audio.mixer_xml.path /vendor/etc/pine_mixer_paths_sdm439_pm8953.xml
 
-on property:ro.vendor.xiaomi.device=olive
+on property:ro.vendor.xiaomi.series=olive
     setprop vendor.audio.mixer_xml.path /vendor/etc/olive_mixer_paths_sdm439_pm8953.xml
 
 # Camera - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
@@ -75,9 +75,10 @@ on boot
     chmod 0000 /sys/devices/virtual/graphics/fb0/reading_mode
 
 # OverlayFS
-on boot && property:ro.vendor.xiaomi.device=*
-    mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/sensors/:/vendor/etc/sensors
-    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.device}/etc/camera/:/vendor/etc/camera
+# TODO: Split camera_config.xml
+on boot && property:ro.vendor.xiaomi.series=*
+    mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.series}/etc/sensors/:/vendor/etc/sensors
+    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.series}/etc/camera/:/vendor/etc/camera
     restart vendor.camera-provider-2-4
 
 # Thermal
