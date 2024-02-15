@@ -97,7 +97,6 @@
     <ctl name="DEC4 MUX" value="ZERO" />
     <ctl name="SpkrMono VISENSE Switch" value="0" />
     <ctl name="ADC1_INP1 Switch" value="0" />
-    <ctl name="Ext Spk Switch" value="Off" />
     <ctl name="Ext_Receiver_Amp" value="Off" />
     <ctl name="MI439 AW87329 PA Switch" value="0" />
 
@@ -1243,7 +1242,6 @@
         <ctl name="RX3 MIX1 INP1" value="RX1" />
         <ctl name="RX3 Digital Volume" value="83" />
         <ctl name="LINE_OUT" value="Switch" />
-        <ctl name="Ext Spk Switch" value="On" />
         <ctl name="MI439 AW87329 PA Switch" value="1" />
     </path>
 
