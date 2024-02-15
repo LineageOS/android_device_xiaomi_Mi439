@@ -10,8 +10,6 @@ set_acdb_path_props() {
 
 case "$(cat /sys/firmware/devicetree/base/model)" in
 	"PINE QRD")
-		exit 1 # TEMP
-
 		setprop ro.vendor.xiaomi.device pine
 		# Audio
 		set_acdb_path_props pine
