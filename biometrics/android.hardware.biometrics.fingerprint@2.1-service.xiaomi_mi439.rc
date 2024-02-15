@@ -24,6 +24,8 @@ on boot
     chown system system /sys/bus/platform/devices/soc:fpc1020/fingerdown_wait
     chmod 0660 /sys/bus/platform/devices/soc:fpc1020/fingerdown_wait
 
+    write /sys/bus/platform/devices/soc:fpc1020/wakeup_enable enable
+
 on post-fs-data
 #add fingerprint for C3I-224 by gaoge start
     mkdir /data/vendor/goodix 0770 system system
