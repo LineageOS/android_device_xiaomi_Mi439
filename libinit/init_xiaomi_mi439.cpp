@@ -5,7 +5,6 @@
  */
 
 #include <libinit_dalvik_heap.h>
-#include <libinit_utils.h>
 #include <libinit_variant.h>
 
 #include "vendor_init.h"
@@ -50,7 +49,6 @@ static void determine_device()
     android::base::ReadFileToString("/sys/firmware/devicetree/base/model", &fdt_model, true);
     if (fdt_model.find("PINE QRD") != fdt_model.npos) {
         set_variant_props(pine_info);
-        property_override("ro.updater.next_device", "pine");
     } else if (fdt_model.find("Olive QRD") != fdt_model.npos) {
         android::base::ReadFileToString("/sys/xiaomi-sdm439-mach/codename", &mach_codename, true);
         mach_codename.pop_back();
