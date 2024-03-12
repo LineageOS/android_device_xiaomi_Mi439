@@ -960,10 +960,10 @@ String8 QCameraBokeh::extractCalibrationData()
 
     calibData.appendFormat(CALIB_FMT_STRINGS[11],
             buildCommaSeparatedString(calib_data.relative_rotation_matrix,
-            RELCAM_CALIB_ROT_MATRIX_MAX).string());
+            RELCAM_CALIB_ROT_MATRIX_MAX).c_str());
     calibData.appendFormat(CALIB_FMT_STRINGS[12],
             buildCommaSeparatedString(calib_data.relative_geometric_surface_parameters,
-            RELCAM_CALIB_SURFACE_PARMS_MAX).string());
+            RELCAM_CALIB_SURFACE_PARMS_MAX).c_str());
 
     calibData.appendFormat(CALIB_FMT_STRINGS[13], calib_data.relative_principle_point_x_offset);
     calibData.appendFormat(CALIB_FMT_STRINGS[14], calib_data.relative_principle_point_y_offset);
@@ -990,7 +990,7 @@ void QCameraBokeh::dumpInputParams(const char* file, String8 str, uint32_t idx)
     int file_fd = open(filename, O_RDWR | O_CREAT, 0777);
     if (file_fd > 0) {
         fchmod(file_fd, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
-        write(file_fd, str.string(), str.size());
+        write(file_fd, str.c_str(), str.size());
         close(file_fd);
     }
 }
