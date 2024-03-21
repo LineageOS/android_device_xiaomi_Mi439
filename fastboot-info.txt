@@ -1,0 +1,19 @@
+# fastboot-info for Mi439
+version 1
+
+update-super
+
+flash odm
+flash vendor
+flash system
+flash system_ext
+flash product
+
+flash boot
+flash dtbo
+
+flash --apply-vbmeta vbmeta
+
+if-wipe erase cache
+if-wipe erase userdata
+if-wipe erase logdump
