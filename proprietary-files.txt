@@ -1,6 +1,5 @@
 # Not appended blobs from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNCNXM:user/release-keys
 # pine Package version: Xiaomi/pine/pine:10/QKQ1.191014.001/V12.5.1.0.QCMCNXM:user/release-keys
-# FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0019.1/gms-edfd6a4e:user/release-keys
 # PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
 # umi Package version: Xiaomi/umi_global/umi:13/RKQ1.211001.001/V14.0.5.0.TJBMIXM:user/release-keys
 
@@ -100,9 +99,6 @@ vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
-
-# RIL (QCRILD) - from FP3
-vendor/lib64/libril-qc-hal-qmi.so
 
 # Sensor config (olive)
 vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/overlayfs/olive/etc/sensors/sensor_def_qcomdev.conf
