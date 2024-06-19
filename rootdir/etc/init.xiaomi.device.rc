@@ -95,3 +95,8 @@ service thermal-engine /vendor/bin/thermal-engine-olive
     socket thermal-recv-client stream 0660 system oem_2907
     socket thermal-recv-passive-client stream 0660 system oem_2907
     socket thermal-send-rule stream 0660 system oem_2907
+
+# Vibrator
+on early-boot
+    chown system system /sys/class/leds/vibrator/vmax_mv
+    chmod 0600 /sys/class/leds/vibrator/vmax_mv
