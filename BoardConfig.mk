@@ -79,8 +79,9 @@ BOARD_MI439_DYNPART_PARTITION_LIST := $(ALL_PARTITIONS)
 # Partitions - reserved size
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := -1))
-$(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
-    $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := 5120))
+
+BOARD_ODMIMAGE_EXTFS_INODE_COUNT := 128
+BOARD_VENDORIMAGE_EXTFS_INODE_COUNT := 6144
 
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 83886080)) # 80 MB
