@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a3df47e_0ddc2e15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-06-19T08:42:10Z",
+      "side": 1,
+      "message": "What about adding opt-in strength control to common QTI HAL, that could be used on a lot of devices",
+      "revId": "bf4edd6924b80bbdd1b276f0305e56bb21fdcad8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
