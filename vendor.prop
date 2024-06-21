@@ -26,5 +26,6 @@ ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM439
 
 # Xiaomi Mi439 - Vibrator
+vendor.qcom.vibrator.led.enable_effects=true
 vendor.qcom.vibrator.led.mv_min=2000
 vendor.qcom.vibrator.led.mv_max=3500
