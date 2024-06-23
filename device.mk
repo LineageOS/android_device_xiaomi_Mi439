@@ -13,6 +13,9 @@ TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER := true
 # Keymaster
 TARGET_USES_DEVICE_SPECIFIC_KEYMASTER := true
 
+# Wifi firmware symlinks
+TARGET_OVERRIDE_WLAN_MAC_BIN_SYMLINK := true
+
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -102,6 +105,10 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Wifi firmware symlinks
+PRODUCT_PACKAGES := \
+    mi439_firmware_wlan_mac.bin_symlink
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi439/Mi439-vendor.mk)

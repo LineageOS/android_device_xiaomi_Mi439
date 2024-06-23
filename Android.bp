@@ -1,2 +1,9 @@
 soong_namespace {
 }
+
+install_symlink {
+    name: "mi439_firmware_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/prima/wlan_mac.bin",
+    symlink_target: "/mnt/vendor/persist/.wlan_mac.bin",
+}
