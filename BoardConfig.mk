@@ -13,6 +13,9 @@ $(foreach p, $(call to-upper, $(ALL_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4) \
     $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
+# Wi-Fi firmware symlinks
+TARGET_FIRMWARE_WLAN_MAC_BIN_SYMLINK_TARGET := /mnt/vendor/persist/.wlan_mac.bin
+
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
