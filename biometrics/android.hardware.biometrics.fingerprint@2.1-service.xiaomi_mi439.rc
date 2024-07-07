@@ -35,8 +35,10 @@ on property:vendor.fingerprint.hwmdl=failed
 on property:ro.vendor.xiaomi.device=olive
     enable vendor.fps_hal
 
-on property:vendor.fingerprint.hwmdl=fingerprint
-    setprop ro.boot.product.hardware.sku olive
-
-on property:vendor.fingerprint.hwmdl=gf_fingerprint
+# FIXME
+#on property:vendor.fingerprint.hwmdl=fingerprint
+#    setprop ro.boot.product.hardware.sku olive
+#on property:vendor.fingerprint.hwmdl=gf_fingerprint
+#    setprop ro.boot.product.hardware.sku olive
+on property:ro.vendor.xiaomi.device=olive
     setprop ro.boot.product.hardware.sku olive
