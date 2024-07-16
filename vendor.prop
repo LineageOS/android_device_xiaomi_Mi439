@@ -9,6 +9,9 @@ vendor.audio.feature.fluence.enable=true
 # Xiaomi Mi439 - Camera
 persist.vendor.camera.stats.test=5
 
+# Xiaomi Mi439 - ConsumerIR
+ro.hardware.consumerir=umi
+
 # Xiaomi Mi439 - Encryption
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
