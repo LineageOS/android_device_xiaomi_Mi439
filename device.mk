@@ -50,6 +50,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8937
 
+# Consumer IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.xiaomi
+
 # Dumpstate
 PRODUCT_PACKAGES += \
     libdumpstate_device
@@ -101,6 +105,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/xiaomi \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs

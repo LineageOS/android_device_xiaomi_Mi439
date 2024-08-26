@@ -2,5 +2,9 @@
   {
     "repository": "android_device_xiaomi_mithorium-common",
     "target_path": "device/xiaomi/mithorium-common"
+  },
+  {
+    "repository": "android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
   }
 ]
