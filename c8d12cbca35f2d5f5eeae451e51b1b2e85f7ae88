@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df045ba1_5cb67610",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-08-26T16:57:29Z",
+      "side": 1,
+      "message": "```\n[  442.362572] spi_qsd 7af6000.spi: msm_spi_clock_set: no match found for requested clock frequency:606720\n[  442.362587] spi_qsd 7af6000.spi: msm_spi_process_transfer: Error setting QUP to reset-state\n[  442.362597] ir-spi spi6.0: SPI transfer failed: -5\n[  442.362634] spi_master spi6: failed to transfer one message from queue\n[  442.362642] ir-spi spi6.0: unable to deliver the signal\n```",
+      "revId": "c8d12cbca35f2d5f5eeae451e51b1b2e85f7ae88",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
