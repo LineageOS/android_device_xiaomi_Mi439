@@ -1,7 +1,6 @@
 # Not appended blobs from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNCNXM:user/release-keys
 # pine Package version: Xiaomi/pine/pine:10/QKQ1.191014.001/V12.5.1.0.QCMCNXM:user/release-keys
 # PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
-# umi Package version: Xiaomi/umi_global/umi:13/RKQ1.211001.001/V14.0.5.0.TJBMIXM:user/release-keys
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -39,8 +38,8 @@ vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 # Charger
 vendor/bin/hvdcp_opti
 
-# Consumer IR - from umi
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8937.so|c5c8947ace6c6479914a57ad609a961eebf0b949
+# Consumer IR
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8937.so
 
 # Fingerprint
 vendor/lib64/com.fingerprints.extension@1.0.so
