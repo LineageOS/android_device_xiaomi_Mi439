@@ -32,8 +32,8 @@ on post-fs-data
 on property:vendor.fingerprint.hwmdl=failed
     stop vendor.fps_hal
 
-on property:ro.vendor.xiaomi.device=olive
-    enable vendor.fps_hal
+on zygote-start && property:ro.vendor.xiaomi.device=olive
+    start vendor.fps_hal
 
 # FIXME
 #on property:vendor.fingerprint.hwmdl=fingerprint
