@@ -7,7 +7,7 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     group system input uhid
     disabled
 
-on boot
+on init
     # add for goodix 
     chown system system /dev/goodix_fp
     chmod 0644 /dev/goodix_fp
