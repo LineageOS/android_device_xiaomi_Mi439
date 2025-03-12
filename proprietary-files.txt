@@ -25,33 +25,33 @@ vendor/etc/acdbdata/pine/SDM439_SKU1_Speaker_cal.acdb
 vendor/etc/acdbdata/pine/SDM439_SKU1_workspaceFile.qwsp
 
 # ADSP Modules
-vendor/lib/rfsa/adsp/dirac_resource.dar
-vendor/lib/rfsa/adsp/libdirac-capiv2.so
-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
-vendor/lib/rfsa/adsp/misound_karaoke_res.bin
-vendor/lib/rfsa/adsp/misound_res.bin
+-vendor/lib/rfsa/adsp/dirac_resource.dar;DISABLE_DEPS
+-vendor/lib/rfsa/adsp/libdirac-capiv2.so;DISABLE_DEPS
+-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin;DISABLE_DEPS
+-vendor/lib/rfsa/adsp/misound_karaoke_res.bin;DISABLE_DEPS
+-vendor/lib/rfsa/adsp/misound_res.bin;DISABLE_DEPS
 
 # Audio dirac - from mido
 vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
-vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
-vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
+-vendor/lib/soundfx/libdirac.so;DISABLE_DEPS|f63826a905b520fa524e4c1b147be7cf65240953
+-vendor/lib/libDiracAPI_SHARED.so;DISABLE_DEPS|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 
 # Charger
-vendor/bin/hvdcp_opti
+-vendor/bin/hvdcp_opti;DISABLE_DEPS
 
 # Consumer IR - from umi
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8937.so|c5c8947ace6c6479914a57ad609a961eebf0b949
+-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8937.so;DISABLE_DEPS|c5c8947ace6c6479914a57ad609a961eebf0b949
 
 # Fingerprint
-vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so
-vendor/lib64/hw/gf_fingerprint.default.so
-vendor/lib64/libgf_ca.so
-vendor/lib64/libgf_hal.so
-vendor/lib64/libgoodixhwfingerprint.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib/com.fingerprints.extension@1.0.so
+-vendor/lib64/com.fingerprints.extension@1.0.so;DISABLE_DEPS
+-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so;DISABLE_DEPS
+-vendor/lib64/hw/gf_fingerprint.default.so;DISABLE_DEPS
+-vendor/lib64/libgf_ca.so;DISABLE_DEPS
+-vendor/lib64/libgf_hal.so;DISABLE_DEPS
+-vendor/lib64/libgoodixhwfingerprint.so;DISABLE_DEPS
+-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so;DISABLE_DEPS
+-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so;DISABLE_DEPS
+-vendor/lib/com.fingerprints.extension@1.0.so;DISABLE_DEPS
 
 # Firmwares
 vendor/firmware/aw87519_rcv.bin
@@ -69,9 +69,9 @@ vendor/firmware/C3E_FT5446_Truly.bin
 vendor/firmware/gt1x_fw.bin
 
 # Gatekeeper (QTI) - from PAN
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti;DISABLE_DEPS
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so;DISABLE_DEPS
 
 # Graphics firmware - from PAN
 vendor/firmware/a506_zap.b00
@@ -84,12 +84,12 @@ vendor/firmware/a530_pm4.fw
 vendor/firmware/a506_zap.mdt
 
 # Keymaster (QTI) - from PAN
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti;DISABLE_DEPS
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqcbor.so
-vendor/lib64/libqtikeymaster4.so
+-vendor/lib64/libkeymasterdeviceutils.so;DISABLE_DEPS
+-vendor/lib64/libkeymasterutils.so;DISABLE_DEPS
+-vendor/lib64/libqcbor.so;DISABLE_DEPS
+-vendor/lib64/libqtikeymaster4.so;DISABLE_DEPS
 
 # Perf configs - from PAN
 vendor/etc/perf/commonresourceconfigs.xml
@@ -101,23 +101,23 @@ vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
 
 # Sensor config (olive)
-vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/overlayfs/olive/etc/sensors/sensor_def_qcomdev.conf
+vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/etc/overlayfs/olive/sensors/sensor_def_qcomdev.conf
 
 # Sensor config (pine) - from pine
-vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/overlayfs/pine/etc/sensors/sensor_def_qcomdev.conf
+vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/etc/overlayfs/pine/sensors/sensor_def_qcomdev.conf
 
 # Sensors
-vendor/bin/sensors.qti
-vendor/lib/libsensor1.so
-vendor/lib64/libsensor1.so
+-vendor/bin/sensors.qti;DISABLE_DEPS
+-vendor/lib/libsensor1.so;DISABLE_DEPS
+-vendor/lib64/libsensor1.so;DISABLE_DEPS
 
 # Sensors (SSC)
-vendor/lib64/libsensor_reg.so
-vendor/lib64/sensors.ssc.so
+-vendor/lib64/libsensor_reg.so;DISABLE_DEPS
+-vendor/lib64/sensors.ssc.so;DISABLE_DEPS
 
 # Thermal
-vendor/bin/thermal-engine:vendor/bin/thermal-engine-olive
-vendor/lib64/libthermalfeature.so
+-vendor/bin/thermal-engine:vendor/bin/thermal-engine-olive;DISABLE_DEPS
+-vendor/lib64/libthermalfeature.so;DISABLE_DEPS
 
 # Thermal configs
 vendor/etc/thermal-engine-camera.conf

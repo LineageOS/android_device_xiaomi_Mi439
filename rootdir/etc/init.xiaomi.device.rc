@@ -80,8 +80,8 @@ on boot
 # OverlayFS
 # TODO: Split camera_config.xml
 on boot && property:ro.vendor.xiaomi.series=*
-    mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.series}/etc/sensors/:/vendor/etc/sensors
-    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/overlayfs/${ro.vendor.xiaomi.series}/etc/camera/:/vendor/etc/camera
+    mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/etc/overlayfs/${ro.vendor.xiaomi.series}/sensors/:/vendor/etc/sensors
+    mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/etc/overlayfs/${ro.vendor.xiaomi.series}/camera/:/vendor/etc/camera
     enable vendor.camera-provider-2-4
 
 # Thermal
