@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set,livedisplay_sysfs,enable_se,true)
 
+# Power
+$(call soong_config_set,qtipower,tap_to_wake_node,/proc/sys/dev/xiaomi_sdm439_touchscreen/enable_dt2w)
+
 # Recovery
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/Mi439/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti

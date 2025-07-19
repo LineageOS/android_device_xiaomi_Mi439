@@ -91,9 +91,6 @@ ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1287651328 # 1228 MB
 endif
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/sys/dev/xiaomi_sdm439_touchscreen/enable_dt2w"
-
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
