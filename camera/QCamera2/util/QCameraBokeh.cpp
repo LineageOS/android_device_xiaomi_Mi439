@@ -33,6 +33,7 @@
 #include <utils/Errors.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
 // Camera dependencies
 #include "QCameraBokeh.h"
 #include "QCameraTrace.h"
