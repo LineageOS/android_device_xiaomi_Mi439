@@ -1,0 +1,75 @@
+
+
+cc_binary {
+    name: "mm-jpeg-interface-test",
+    compile_multilib: "32",
+    cflags: [
+        "-DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-unused-parameter",
+        "-D_ANDROID_",
+        "-DUSE_ION",
+        "-DSYSTEM_HEADER_PREFIX=sys",
+    ],
+    include_dirs: [
+        "device/xiaomi/Mi439/camera/QCamera2/stack/mm-jpeg-interface/inc",
+        "device/xiaomi/Mi439/camera/QCamera2/stack/common",
+        "device/xiaomi/Mi439/camera/QCamera2/stack/mm-camera-interface/inc",
+        "device/xiaomi/Mi439/camera/mm-image-codec/qexif",
+        "device/xiaomi/Mi439/camera/mm-image-codec/qomx_core",
+    ],
+    local_include_dirs: ["."],
+    header_libs: [
+        "media_plugin_headers",
+        "generated_kernel_headers",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libmmjpeg_interface",
+        "libion",
+    ],
+    srcs: ["mm_jpeg_test.c"],
+    vendor: true,
+}
+
+cc_binary {
+    name: "mm-jpegdec-interface-test",
+    compile_multilib: "32",
+    cflags: [
+        "-DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-unused-parameter",
+        "-D_ANDROID_",
+        "-DUSE_ION",
+        "-DSYSTEM_HEADER_PREFIX=sys",
+    ],
+    include_dirs: [
+        "device/xiaomi/Mi439/camera/QCamera2/stack/mm-jpeg-interface/inc",
+        "device/xiaomi/Mi439/camera/QCamera2/stack/common",
+        "device/xiaomi/Mi439/camera/QCamera2/stack/mm-camera-interface/inc",
+        "device/xiaomi/Mi439/camera/mm-image-codec/qexif",
+        "device/xiaomi/Mi439/camera/mm-image-codec/qomx_core",
+    ],
+    local_include_dirs: ["."],
+    header_libs: [
+        "media_plugin_headers",
+        "generated_kernel_headers",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libmmjpeg_interface",
+        "libion",
+    ],
+    srcs: ["mm_jpegdec_test.c"],
+    vendor: true,
+}

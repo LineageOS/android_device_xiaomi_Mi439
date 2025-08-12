@@ -1,0 +1,27 @@
+
+
+cc_library_shared {
+    name: "libhal_dbg",
+    cflags: [
+        "-D_ANDROID_",
+        "-Werror",
+        "-Wunused-parameter",
+    ],
+    include_dirs: ["device/xiaomi/Mi439/camera/QCamera2/stack/common"] + ["device/xiaomi/Mi439/camera/QCamera2/stack/mm-camera-interface/inc"],
+    local_include_dirs: ["."],
+    header_libs: [
+        "libutils_headers",
+        "generated_kernel_headers",
+    ],
+
+    shared_libs: [
+        "libdl",
+        "libcutils",
+        "liblog",
+    ],
+    srcs: [
+        "fdleak.cpp",
+        "memleak.cpp",
+    ],
+    vendor: true,
+}

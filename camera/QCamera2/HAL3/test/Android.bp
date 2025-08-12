@@ -1,0 +1,46 @@
+
+
+cc_binary {
+    name: "hal3-test-app",
+    compile_multilib: "32",
+    cflags: [
+        "-DQCAMERA_HAL3_SUPPORT",
+        "-DCAMERA_CHIPSET_8937",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-std=c++14",
+        "-std=gnu++1z",
+    ],
+    include_dirs: [
+        "device/xiaomi/Mi439/camera/QCamera2/HAL3",
+        "device/xiaomi/Mi439/camera/QCamera2/stack/mm-camera-interface/inc",
+        "hardware/qcom-caf/msm8953/media/libstagefrighthw",
+        "hardware/qcom-caf/msm8953/media/mm-core/inc",
+    ],
+    header_libs: [
+        "libhardware_headers",
+        "libbinder_headers",
+        "libandroid_sensor_headers",
+        "generated_kernel_headers",
+    ],
+
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libcamera_metadata",
+        "libcutils",
+        "libion",
+    ],
+    srcs: [
+        "QCameraHAL3Base.cpp",
+        "QCameraHAL3MainTestContext.cpp",
+        "QCameraHAL3VideoTest.cpp",
+        "QCameraHAL3PreviewTest.cpp",
+        "QCameraHAL3SnapshotTest.cpp",
+        "QCameraHAL3RawSnapshotTest.cpp",
+        "QCameraHAL3Test.cpp",
+    ],
+    static_libs: ["android.hardware.camera.common@1.0-helper"],
+    vendor: true,
+}
