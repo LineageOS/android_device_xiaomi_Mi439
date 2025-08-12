@@ -35,8 +35,8 @@ ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
     LOCAL_C_INCLUDES := $(LIBION_HEADER_PATHS)
   else
     LOCAL_C_INCLUDES := \
-            $(TOP)/system/core/libion/include \
-            $(TOP)/system/core/libion/kernel-headers
+            system/memory/libion/include \
+            system/memory/libion/kernel-headers
   endif
 endif
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)
@@ -89,8 +89,8 @@ ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
     LOCAL_C_INCLUDES := $(LIBION_HEADER_PATHS)
   else
     LOCAL_C_INCLUDES := \
-            $(TOP)/system/core/libion/include \
-            $(TOP)/system/core/libion/kernel-headers
+            system/memory/libion/include \
+            system/memory/libion/kernel-headers
   endif
 endif
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)
