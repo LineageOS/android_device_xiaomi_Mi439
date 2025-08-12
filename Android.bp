@@ -1,2 +1,7 @@
 soong_namespace {
+    imports: [
+        "hardware/qcom-caf/msm8953",
+        "vendor/qcom/opensource/display",
+        "vendor/xiaomi/mithorium-common",
+    ],
 }
