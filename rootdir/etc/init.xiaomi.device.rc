@@ -13,7 +13,7 @@ on property:ro.vendor.xiaomi.series=olive
 
 # Camera
 on init
-    stop vendor.camera-provider-2-4
+    stop vendor.camera.provider
 
 # Camera - from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.0.2.0.QCNMIXM:user/release-keys
 on post-fs
@@ -82,7 +82,7 @@ on boot
 on boot && property:ro.vendor.xiaomi.series=*
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/etc/overlayfs/${ro.vendor.xiaomi.series}/sensors/:/vendor/etc/sensors
     mount overlay overlay /vendor/etc/camera ro lowerdir=/vendor/etc/overlayfs/${ro.vendor.xiaomi.series}/camera/:/vendor/etc/camera
-    enable vendor.camera-provider-2-4
+    enable vendor.camera.provider
 
 # Thermal
 service thermal-engine /vendor/bin/thermal-engine-olive
