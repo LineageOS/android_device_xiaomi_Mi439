@@ -88,6 +88,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
+# LiveDisplay
+$(call soong_config_set,livedisplay_sysfs,enable_se,true)
+
 # Recovery
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/Mi439/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hvdcp_opti
