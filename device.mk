@@ -89,7 +89,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 # LiveDisplay
-$(call soong_config_set,livedisplay_sysfs,enable_se,true)
+$(call soong_config_set_bool,livedisplay_sysfs,enable_se,true)
 
 # Power
 $(call soong_config_set,qtipower,tap_to_wake_node,/proc/sys/dev/xiaomi_sdm439_touchscreen/enable_dt2w)
