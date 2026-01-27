@@ -824,7 +824,6 @@ void QCameraBokeh::dumpYUVtoFile(
                 name_prefix, offset.mp[0].width, offset.mp[0].height, idx);
 
     int file_fd = open(filename, O_RDWR | O_CREAT, 0777);
-    ssize_t written_len = 0;
     if (file_fd >= 0) {
         void *data = NULL;
 
@@ -836,8 +835,6 @@ void QCameraBokeh::dumpYUVtoFile(
             }
             for (int j = 0; j < offset.mp[i].height; j++) {
                 data = (void *)(pBuf + index);
-                written_len += write(file_fd, data,
-                        (size_t)offset.mp[i].width);
                 index += (uint32_t)offset.mp[i].stride;
             }
         }

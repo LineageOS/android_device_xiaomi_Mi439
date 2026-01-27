@@ -1746,7 +1746,6 @@ void mm_camera_muxer_stream_frame_sync(mm_camera_super_buf_t *super_buf,
 void mm_camera_muxer_channel_frame_sync(mm_camera_super_buf_t *super_buf,
         void *user_data)
 {
-    int32_t rc = 0;
     mm_channel_t *ch_obj = (mm_channel_t *)user_data;
     mm_channel_t *m_obj = ch_obj;
 
@@ -1758,7 +1757,7 @@ void mm_camera_muxer_channel_frame_sync(mm_camera_super_buf_t *super_buf,
         m_obj = m_obj->master_ch_obj;
     }
 
-    rc = mm_camera_muxer_do_frame_sync(&m_obj->frame_sync.superbuf_queue,
+    mm_camera_muxer_do_frame_sync(&m_obj->frame_sync.superbuf_queue,
             super_buf, NULL);
     mm_camera_muxer_channel_req_data_cb(NULL,
                 ch_obj);

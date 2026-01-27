@@ -29,6 +29,7 @@ cc_library_shared {
         "-DVIDEO_EXPLICIT_UBWC",
         "-DSUPPORT_ONLY_HAL3",
         "-DSUPPORT_POWER_HINT_XML",
+        "-Wno-unused-but-set-variable",
     ],
     include_dirs: [
         "device/xiaomi/Mi439/camera/mm-image-codec/qexif",
