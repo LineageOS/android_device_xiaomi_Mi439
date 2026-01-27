@@ -1244,7 +1244,7 @@ int32_t QCamera3GrallocMemory::getBufferIndex(uint32_t frameNumber)
 int QCamera3GrallocMemory::cacheOps(uint32_t index, unsigned int cmd)
 {
     int rc = 0;
-    bool needToInvalidate = false;
+    [[maybe_unused]] bool needToInvalidate = false;
     struct private_handle_t *privateHandle = NULL;
 
     if (index >= MM_CAMERA_MAX_NUM_FRAMES) {

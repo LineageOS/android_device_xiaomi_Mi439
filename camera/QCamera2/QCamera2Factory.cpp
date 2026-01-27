@@ -610,7 +610,7 @@ int QCamera2Factory::setTorchMode(const char* camera_id, bool on)
  *==========================================================================*/
 bool QCamera2Factory::isDualCamAvailable(int hal3Enabled)
 {
-    bool rc = false;
+    [[maybe_unused]] bool rc = false;
     int i = 0;
 #ifdef QCAMERA_HAL1_SUPPORT
     camera_info info;

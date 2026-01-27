@@ -3569,12 +3569,6 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
             cam_dimension_t analysisDim;
             analysisDim = mCommon.getMatchingDimension(previewSize,
                     analysisInfo.analysis_recommended_res);
-            uint32_t camHandle = mCameraHandle->camera_handle;
-            uint32_t chHandle = mChannelHandle;
-            if (isDualCamera() && !mCommon.needAnalysisStream()) {
-                camHandle = get_main_camera_handle(mCameraHandle->camera_handle);
-                chHandle = get_main_camera_handle(mChannelHandle);
-            }
             mAnalysisChannel = new QCamera3SupportChannel(
                     mCameraHandle->camera_handle,
                     mChannelHandle,
@@ -6951,7 +6945,6 @@ int QCamera3HardwareInterface::processCaptureRequest(
     // For first capture request, send capture intent, and
     // stream on all streams
     uint32_t camHdl = mCameraHandle->camera_handle;
-    uint32_t channelHdl = mChannelHandle;
     int config_index = CONFIG_INDEX_MAIN;
     CameraMetadata l_meta = meta;
     metadata_buffer_t *params = mParameters;
@@ -6970,7 +6963,6 @@ int QCamera3HardwareInterface::processCaptureRequest(
         // resources are deallocated
         if(isDualCamera()) {
             camHdl = get_main_camera_handle(mCameraHandle->camera_handle);
-            channelHdl = mChannelHandle;
 
             //Set HAL pptype for dual camera.
             //For multicamera set PP type NONE.
@@ -11143,38 +11135,37 @@ void QCamera3HardwareInterface::dumpMetadataToFile(tuning_params_t &meta,
         filePath.append(buf);
         int file_fd = open(filePath.c_str(), O_RDWR | O_CREAT, 0777);
         if (file_fd >= 0) {
-            ssize_t written_len = 0;
             meta.tuning_data_version = TUNING_DATA_VERSION;
             void *data = (void *)((uint8_t *)&meta.tuning_data_version);
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_sensor_data_size);
             LOGD("tuning_sensor_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_vfe_data_size);
             LOGD("tuning_vfe_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_cpp_data_size);
             LOGD("tuning_cpp_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            write(file_fd, data, sizeof(uint32_t));
             data = (void *)((uint8_t *)&meta.tuning_cac_data_size);
             LOGD("tuning_cac_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            write(file_fd, data, sizeof(uint32_t));
             meta.tuning_mod3_data_size = 0;
             data = (void *)((uint8_t *)&meta.tuning_mod3_data_size);
             LOGD("tuning_mod3_data_size %d",(int)(*(int *)data));
-            written_len += write(file_fd, data, sizeof(uint32_t));
+            write(file_fd, data, sizeof(uint32_t));
             size_t total_size = meta.tuning_sensor_data_size;
             data = (void *)((uint8_t *)&meta.data);
-            written_len += write(file_fd, data, total_size);
+            write(file_fd, data, total_size);
             total_size = meta.tuning_vfe_data_size;
             data = (void *)((uint8_t *)&meta.data[TUNING_VFE_DATA_OFFSET]);
-            written_len += write(file_fd, data, total_size);
+            write(file_fd, data, total_size);
             total_size = meta.tuning_cpp_data_size;
             data = (void *)((uint8_t *)&meta.data[TUNING_CPP_DATA_OFFSET]);
-            written_len += write(file_fd, data, total_size);
+            write(file_fd, data, total_size);
             total_size = meta.tuning_cac_data_size;
             data = (void *)((uint8_t *)&meta.data[TUNING_CAC_DATA_OFFSET]);
-            written_len += write(file_fd, data, total_size);
+            write(file_fd, data, total_size);
             close(file_fd);
         }else {
             LOGE("fail to open file for metadata dumping");

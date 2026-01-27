@@ -400,8 +400,7 @@ void QCameraHALPP::dumpYUVtoFile(const uint8_t* pBuf, const char *name, ssize_t 
     int file_fd = open(name, O_RDWR | O_CREAT, 0777);
     if (file_fd > 0) {
         fchmod(file_fd, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
-        ssize_t writen_bytes = 0;
-        writen_bytes = write(file_fd, pBuf, buf_len);
+        write(file_fd, pBuf, buf_len);
         close(file_fd);
         LOGD("dump output frame to file: %s, size:%d", name, buf_len);
     }

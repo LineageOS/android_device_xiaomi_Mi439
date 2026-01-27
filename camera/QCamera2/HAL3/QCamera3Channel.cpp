@@ -4932,7 +4932,6 @@ void QCamera3YUVChannel::ZSLChannelCb(mm_camera_super_buf_t *recvd_frame)
     LOGI("[KPI Perf]: superbuf frame_idx %d",
             recvd_frame->bufs[0]->frame_idx);
 
-    uint32_t frameIndex;
     uint32_t frameNum;
     bool metaNeedPP = true;
     bool past_frame = false;
@@ -5009,7 +5008,6 @@ void QCamera3YUVChannel::ZSLChannelCb(mm_camera_super_buf_t *recvd_frame)
 
     for (uint32_t i = 0; i < recvd_frame->num_bufs; i++) {
         if (recvd_frame->bufs[i]->stream_type == CAM_STREAM_TYPE_CALLBACK) {
-            frameIndex = (uint8_t)recvd_frame->bufs[i]->buf_idx;
             mm_camera_super_buf_t *cb_buf =
                     (mm_camera_super_buf_t *) malloc(sizeof(mm_camera_super_buf_t));
             *cb_buf = *recvd_frame;
@@ -7073,7 +7071,6 @@ void QCamera3PicChannel::ZSLChannelCb(mm_camera_super_buf_t *recvd_frame)
     LOGI("[KPI Perf]: superbuf frame_idx %d",
             recvd_frame->bufs[0]->frame_idx);
 
-    uint32_t frameIndex;
     uint32_t frameNum;
     bool metaNeedPP = true;
     bool past_frame = false;
@@ -7147,7 +7144,6 @@ void QCamera3PicChannel::ZSLChannelCb(mm_camera_super_buf_t *recvd_frame)
 
     for (uint32_t i = 0; i < recvd_frame->num_bufs; i++) {
         if (recvd_frame->bufs[i]->stream_type == CAM_STREAM_TYPE_SNAPSHOT) {
-            frameIndex = (uint8_t)recvd_frame->bufs[i]->buf_idx;
             mm_camera_super_buf_t *snap_buf =
                     (mm_camera_super_buf_t *) malloc(sizeof(mm_camera_super_buf_t));
             *snap_buf = *recvd_frame;
