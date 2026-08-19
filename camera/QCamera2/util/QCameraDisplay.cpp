@@ -41,10 +41,10 @@ extern "C" {
 #define DISPLAY_DEFAULT_FPS                60
 
 #ifdef USE_DISPLAY_SERVICE
-using ::android::frameworks::displayservice::V1_0::IDisplayEventReceiver;
-using ::android::frameworks::displayservice::V1_0::IDisplayService;
-using ::android::frameworks::displayservice::V1_0::IEventCallback;
-using ::android::frameworks::displayservice::V1_0::Status;
+using ::lineage::frameworks::displayservice::V1_0::IDisplayEventReceiver;
+using ::lineage::frameworks::displayservice::V1_0::IDisplayService;
+using ::lineage::frameworks::displayservice::V1_0::IEventCallback;
+using ::lineage::frameworks::displayservice::V1_0::Status;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
 using ::android::sp;
@@ -328,7 +328,7 @@ void
 QCameraDisplay::init()
 {
     //get the display service and register for Event receiver.
-    mDisplayService = android::frameworks::displayservice::V1_0::IDisplayService::getService();
+    mDisplayService = lineage::frameworks::displayservice::V1_0::IDisplayService::getService();
     if(mDisplayService == nullptr)
     {
         LOGE("Camera failed to get Displayservice for vsync.");

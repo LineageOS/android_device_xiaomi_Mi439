@@ -90,7 +90,7 @@ cc_library_shared {
         "libdl",
         "libhal_dbg",
         "libion",
-        "android.frameworks.displayservice@1.0",
+        "lineage.frameworks.displayservice@1.0",
         "android.hidl.base@1.0",
         "libhidlbase",
         "libts_face_beautify_hal",
